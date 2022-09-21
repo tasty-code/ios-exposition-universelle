@@ -8,13 +8,13 @@
 import Foundation
 
 enum ExpoError: Error, LocalizedError {
-    case NotFindNSAssetData
+    case InvalidNSAssetData
     case FailDecode
     case NilPersingData
     
     var errorDescription: String {
         switch self {
-        case .NotFindNSAssetData:
+        case .InvalidNSAssetData:
             return "NSAssetData가 Data파일을 불러오지 못했습니다."
         case .FailDecode:
             return "디코딩에 실패하였습니다."

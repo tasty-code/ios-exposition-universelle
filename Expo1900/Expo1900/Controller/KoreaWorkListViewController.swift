@@ -12,14 +12,13 @@ class KoreaWorkListViewController: UIViewController {
     
     private func getItems() throws {
         guard let jsonData: NSDataAsset = NSDataAsset(name: "items") else {
-            throw ExpoError.NotFindNSAssetData
+            throw ExpoError.InvalidNSAssetData
         }
         do {
             items = try PerserJSON().persingItemJSON(jsonData)
         } catch {
             print(error.localizedDescription)
         }
-        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
