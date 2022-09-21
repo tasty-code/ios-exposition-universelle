@@ -10,27 +10,29 @@ import UIKit
 
 class PerserJSON {
     
-    func persingExpositionJSON(_ jsonData: NSDataAsset) -> Exposition {
+    func persingExpositionJSON(_ jsonData: NSDataAsset) throws -> Exposition {
         var exposition: Exposition?
         let jsonDecoder = JSONDecoder()
         
         do {
             exposition = try jsonDecoder.decode(Exposition.self, from: jsonData.data)
         } catch {
-            print(ExpoError.failDecode.errorDescription)
+            throw ExpoError.FailDecode
         }
-        if let value = exposition { return value } else { print(ExpoError.nilPersingData.errorDescription) }
+        guard let value = exposition else { throw ExpoError.NilPersingData }
+        return value
     }
     
-    func persingItemJSON(_ jsonData: NSDataAsset) -> [Item] {
-        var items: [Item] = []
+    func persingItemJSON(_ jsonData: NSDataAsset) throws -> [Item] {
+        var items: [Item]?
         let jsonDecoder = JSONDecoder()
         
         do {
             items = try jsonDecoder.decode([Item].self, from: jsonData.data)
         } catch {
-            print(ExpoError.failDecode.errorDescription)
+            throw ExpoError.FailDecode
         }
-        return items
+        guard let value = items else { throw ExpoError.NilPersingData }
+        return value
     }
 }

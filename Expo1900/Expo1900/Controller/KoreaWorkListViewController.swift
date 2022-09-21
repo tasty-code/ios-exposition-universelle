@@ -10,15 +10,23 @@ import UIKit
 class KoreaWorkListViewController: UIViewController {
     var items: [Item]?
     
-    private func getItems() {
+    private func getItems() throws {
         guard let jsonData: NSDataAsset = NSDataAsset(name: "items") else {
-            print(ExpoError.notFindNSAssetData.errorDescription)
-            return
+            throw ExpoError.NotFindNSAssetData
         }
-        items = PerserJSON().persingItemJSON(jsonData)
+        do {
+            items = try PerserJSON().persingItemJSON(jsonData)
+        } catch {
+            print(error.localizedDescription)
+        }
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        getItems()
+        do {
+            try getItems()
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }
