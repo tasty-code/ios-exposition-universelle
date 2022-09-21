@@ -39,12 +39,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		268C187A28D988C100981105 /* JSON */ = {
+		268C187A28D988C100981105 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				268C187B28D98A6900981105 /* Relic.swift */,
 			);
-			path = JSON;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AA9F828B28DAA3F8009D2210 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		C79FF4A82589F401005FB0FD = {
@@ -66,9 +73,10 @@
 		C79FF4B32589F401005FB0FD /* Expo1900 */ = {
 			isa = PBXGroup;
 			children = (
-				268C187A28D988C100981105 /* JSON */,
-				C79FF4B42589F401005FB0FD /* AppDelegate.swift */,
+				AA9F828B28DAA3F8009D2210 /* New Group */,
+				268C187A28D988C100981105 /* Model */,
 				C79FF4B62589F401005FB0FD /* SceneDelegate.swift */,
+				C79FF4B42589F401005FB0FD /* AppDelegate.swift */,
 				C79FF4B82589F401005FB0FD /* ViewController.swift */,
 				C79FF4BA2589F401005FB0FD /* Main.storyboard */,
 				C79FF4BD2589F404005FB0FD /* Assets.xcassets */,
