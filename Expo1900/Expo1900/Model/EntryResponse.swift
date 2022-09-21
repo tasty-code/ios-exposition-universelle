@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ParisEntryResponse: Decodable {
+struct Exhibition: Decodable {
     let title: String
     let visitors: Int
     let location: String
@@ -15,7 +15,7 @@ struct ParisEntryResponse: Decodable {
     let description: String
 }
 
-struct KoreaEntryResponse: Decodable {
+struct WorkPieceInformation: Decodable {
     let name: String
     let imageName: String
     let shortDesc: String
