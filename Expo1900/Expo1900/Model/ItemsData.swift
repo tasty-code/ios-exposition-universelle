@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ExpoData: Decodable {
+struct ItemsData: Decodable {
     var name: String
     var imageName: String
     var shortDescription: String
@@ -21,3 +21,14 @@ struct ExpoData: Decodable {
     }
 }
 
+struct ExpoData: Decodable {
+    var title: String
+    var visitors: Int
+    var location: String
+    var duration: String
+    var description: String
+    
+    enum CodingKeys: String, CodingKey {
+        case title, visitors, location, duration, description
+    }
+}
