@@ -10,6 +10,18 @@ import UIKit
 
 class PerserJSON {
     
+    func persingExpositionJSON(_ jsonData: NSDataAsset) -> Exposition {
+        var exposition: Exposition?
+        let jsonDecoder = JSONDecoder()
+        
+        do {
+            exposition = try jsonDecoder.decode(Exposition.self, from: jsonData.data)
+        } catch {
+            print(ExpoError.failDecode.errorDescription)
+        }
+        if let value = exposition { return value } else { print(ExpoError.nilPersingData.errorDescription) }
+    }
+    
     func persingItemJSON(_ jsonData: NSDataAsset) -> [Item] {
         var items: [Item] = []
         let jsonDecoder = JSONDecoder()
