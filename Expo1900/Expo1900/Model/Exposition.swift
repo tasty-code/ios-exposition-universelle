@@ -7,11 +7,10 @@
 
 import Foundation
 
-struct Expo: Decodable {
+struct Exposition: Decodable {
     let title: String
     let visitors: Int
     let locations: String
     let duration: String
     let description: String
-    
 }
