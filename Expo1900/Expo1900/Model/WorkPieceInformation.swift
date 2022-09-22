@@ -15,8 +15,8 @@ struct WorkPieceInformation: Decodable {
     
     enum CodingKeys: String, CodingKey {
         case name
+        case description
         case imageName = "image_name"
         case shortDescription = "short_desc"
-        case description
     }
 }
