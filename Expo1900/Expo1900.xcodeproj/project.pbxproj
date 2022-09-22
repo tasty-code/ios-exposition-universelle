@@ -13,7 +13,7 @@
 		C79FF4BC2589F401005FB0FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C79FF4BA2589F401005FB0FD /* Main.storyboard */; };
 		C79FF4BE2589F404005FB0FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C79FF4BD2589F404005FB0FD /* Assets.xcassets */; };
 		C79FF4C12589F404005FB0FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C79FF4BF2589F404005FB0FD /* LaunchScreen.storyboard */; };
-		FA4B47FB28DAB0D20065700D /* EntryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B47FA28DAB0D20065700D /* EntryResponse.swift */; };
+		FA4B47FB28DAB0D20065700D /* Exhibition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B47FA28DAB0D20065700D /* Exhibition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		C79FF4BD2589F404005FB0FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C79FF4C02589F404005FB0FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C79FF4C22589F404005FB0FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA4B47FA28DAB0D20065700D /* EntryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryResponse.swift; sourceTree = "<group>"; };
+		FA4B47FA28DAB0D20065700D /* Exhibition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exhibition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +42,7 @@
 		325EC45628DAF01A001C3FB2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FA4B47FA28DAB0D20065700D /* EntryResponse.swift */,
+				FA4B47FA28DAB0D20065700D /* Exhibition.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 			files = (
 				C79FF4B92589F401005FB0FD /* ViewController.swift in Sources */,
 				C79FF4B52589F401005FB0FD /* AppDelegate.swift in Sources */,
-				FA4B47FB28DAB0D20065700D /* EntryResponse.swift in Sources */,
+				FA4B47FB28DAB0D20065700D /* Exhibition.swift in Sources */,
 				C79FF4B72589F401005FB0FD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
