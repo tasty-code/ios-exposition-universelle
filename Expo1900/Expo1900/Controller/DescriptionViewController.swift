@@ -16,7 +16,7 @@ class DescriptionViewController: UIViewController {
     @IBOutlet weak private var workLabel: UILabel!
     
     private func settingViewController() {
-        self.navigationController?.navigationItem.title = workName
+        navigationItem.title = workName
         workImageView.image = UIImage(named: workImageName)
         workLabel.text = workDescription
     }

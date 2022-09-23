@@ -8,7 +8,7 @@
 import UIKit
 
 class KoreaWorkListViewController: UIViewController {
-    var items: [Item]?
+    var items = [Item]()
     
     @IBOutlet weak var workListTableView: UITableView!
     
@@ -37,21 +37,26 @@ class KoreaWorkListViewController: UIViewController {
 }
 
 extension KoreaWorkListViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let descriptionViewContoller = storyboard.instantiateViewController(withIdentifier: "DescriptionView") as? DescriptionViewController else { return }
+        descriptionViewContoller.workName = items[indexPath.row].name
+        descriptionViewContoller.workImageName = items[indexPath.row].imageName
+        descriptionViewContoller.workDescription = items[indexPath.row].description
+        self.navigationController?.pushViewController(descriptionViewContoller, animated: true)
+    }
 }
 
 extension KoreaWorkListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let value = items else { return 0 }
-        return value.count
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = workListTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? WorkListTableViewCell else { return UITableViewCell() }
-        guard let value = items else { return UITableViewCell() }
-        cell.workImageView.image = UIImage(named: value[indexPath.row].imageName)
-        cell.workNameLabel.text = value[indexPath.row].name
-        cell.workShortDescription.text = value[indexPath.row].shortDescription
+        cell.workImageView.image = UIImage(named: items[indexPath.row].imageName)
+        cell.workNameLabel.text = items[indexPath.row].name
+        cell.workShortDescription.text = items[indexPath.row].shortDescription
         return cell
     }
     
