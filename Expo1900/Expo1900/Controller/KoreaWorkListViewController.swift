@@ -10,6 +10,8 @@ import UIKit
 class KoreaWorkListViewController: UIViewController {
     var items: [Item]?
     
+    @IBOutlet weak var workListTableView: UITableView!
+    
     private func getItems() throws {
         guard let jsonData: NSDataAsset = NSDataAsset(name: "items") else {
             throw ExpoError.InvalidNSAssetData
@@ -27,6 +29,30 @@ class KoreaWorkListViewController: UIViewController {
         } catch {
             print(error.localizedDescription)
         }
+        workListTableView.delegate = self
+        workListTableView.dataSource = self
     }
+}
+
+extension KoreaWorkListViewController: UITableViewDelegate {
+    
+}
+
+extension KoreaWorkListViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let value = items else { return 0 }
+        return value.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = workListTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? WorkListTableViewCell else { return UITableViewCell() }
+        guard let value = items else { return UITableViewCell() }
+        cell.workImageView.image = UIImage(named: value[indexPath.row].imageName)
+        cell.workNameLabel.text = value[indexPath.row].name
+        cell.workShortDescription.text = value[indexPath.row].shortDescription
+        return cell
+    }
+    
+    
 }
 

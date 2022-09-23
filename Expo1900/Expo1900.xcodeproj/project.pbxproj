@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		353B1D0128DD4F17009D1F87 /* WorkListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B1D0028DD4F17009D1F87 /* WorkListTableViewCell.swift */; };
 		358DA93928DAB33900904F9D /* ExpoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DA93828DAB33900904F9D /* ExpoError.swift */; };
 		358DA93B28DAB50B00904F9D /* PerserJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DA93A28DAB50B00904F9D /* PerserJSON.swift */; };
 		358DA93D28DAB77900904F9D /* KoreaWorkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DA93C28DAB77900904F9D /* KoreaWorkListViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		353B1D0028DD4F17009D1F87 /* WorkListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListTableViewCell.swift; sourceTree = "<group>"; };
 		358DA93828DAB33900904F9D /* ExpoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoError.swift; sourceTree = "<group>"; };
 		358DA93A28DAB50B00904F9D /* PerserJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerserJSON.swift; sourceTree = "<group>"; };
 		358DA93C28DAB77900904F9D /* KoreaWorkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoreaWorkListViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		353B1CFF28DD4F00009D1F87 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				353B1D0028DD4F17009D1F87 /* WorkListTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		358DA93728DAB32700904F9D /* Error */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +90,7 @@
 		35A4228828D9661B008CB641 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				353B1CFF28DD4F00009D1F87 /* Cell */,
 				C79FF4B42589F401005FB0FD /* AppDelegate.swift */,
 				C79FF4B62589F401005FB0FD /* SceneDelegate.swift */,
 				C79FF4B82589F401005FB0FD /* StartViewController.swift */,
@@ -192,6 +203,7 @@
 				35C9CB4728DAAB5100A81043 /* Exposition.swift in Sources */,
 				C79FF4B52589F401005FB0FD /* AppDelegate.swift in Sources */,
 				C79FF4B72589F401005FB0FD /* SceneDelegate.swift in Sources */,
+				353B1D0128DD4F17009D1F87 /* WorkListTableViewCell.swift in Sources */,
 				358DA93D28DAB77900904F9D /* KoreaWorkListViewController.swift in Sources */,
 				358DA93928DAB33900904F9D /* ExpoError.swift in Sources */,
 				358DA93B28DAB50B00904F9D /* PerserJSON.swift in Sources */,
