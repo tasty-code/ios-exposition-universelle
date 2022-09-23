@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		351BA12328DD92B20001DA23 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351BA12228DD92B20001DA23 /* DescriptionViewController.swift */; };
 		353B1D0128DD4F17009D1F87 /* WorkListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B1D0028DD4F17009D1F87 /* WorkListTableViewCell.swift */; };
 		358DA93928DAB33900904F9D /* ExpoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DA93828DAB33900904F9D /* ExpoError.swift */; };
 		358DA93B28DAB50B00904F9D /* PerserJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DA93A28DAB50B00904F9D /* PerserJSON.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		351BA12228DD92B20001DA23 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		353B1D0028DD4F17009D1F87 /* WorkListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListTableViewCell.swift; sourceTree = "<group>"; };
 		358DA93828DAB33900904F9D /* ExpoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoError.swift; sourceTree = "<group>"; };
 		358DA93A28DAB50B00904F9D /* PerserJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerserJSON.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				C79FF4B62589F401005FB0FD /* SceneDelegate.swift */,
 				C79FF4B82589F401005FB0FD /* StartViewController.swift */,
 				358DA93C28DAB77900904F9D /* KoreaWorkListViewController.swift */,
+				351BA12228DD92B20001DA23 /* DescriptionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				C79FF4B92589F401005FB0FD /* StartViewController.swift in Sources */,
 				35C9CB4728DAAB5100A81043 /* Exposition.swift in Sources */,
 				C79FF4B52589F401005FB0FD /* AppDelegate.swift in Sources */,
+				351BA12328DD92B20001DA23 /* DescriptionViewController.swift in Sources */,
 				C79FF4B72589F401005FB0FD /* SceneDelegate.swift in Sources */,
 				353B1D0128DD4F17009D1F87 /* WorkListTableViewCell.swift in Sources */,
 				358DA93D28DAB77900904F9D /* KoreaWorkListViewController.swift in Sources */,
