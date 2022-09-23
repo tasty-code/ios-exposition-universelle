@@ -31,7 +31,9 @@ class KoreaWorkListViewController: UIViewController {
         }
         workListTableView.delegate = self
         workListTableView.dataSource = self
+        self.navigationController?.isNavigationBarHidden = false
     }
+    
 }
 
 extension KoreaWorkListViewController: UITableViewDelegate {

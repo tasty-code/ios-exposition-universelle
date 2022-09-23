@@ -42,7 +42,12 @@ class StartViewController: UIViewController {
             durationLabel.text = "개최 기간 : \(expodata.duration)"
             descriptionLabel.text = expodata.description
         }
+        self.navigationController?.isNavigationBarHidden = true
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
     }
     func DecimalWon(value: Int) -> String{
             let numberFormatter = NumberFormatter()
