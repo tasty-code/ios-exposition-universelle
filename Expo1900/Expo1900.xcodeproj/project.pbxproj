@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		265AFE7028E2B5B700D456C5 /* ExpositionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AFE6F28E2B5B700D456C5 /* ExpositionError.swift */; };
 		26762AA028DAA70300D43477 /* Exposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26762A9F28DAA70300D43477 /* Exposition.swift */; };
 		268C187C28D98A6900981105 /* Relic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C187B28D98A6900981105 /* Relic.swift */; };
 		26D4399A28DC28B300722F7B /* ExpositionDataParsingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D4399928DC28B300722F7B /* ExpositionDataParsingTest.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		265AFE6F28E2B5B700D456C5 /* ExpositionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpositionError.swift; sourceTree = "<group>"; };
 		26762A9F28DAA70300D43477 /* Exposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exposition.swift; sourceTree = "<group>"; };
 		268C187B28D98A6900981105 /* Relic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relic.swift; sourceTree = "<group>"; };
 		26D4399728DC28B300722F7B /* ExpositionDataParsingTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpositionDataParsingTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		265AFE6E28E2B56F00D456C5 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				265AFE6F28E2B5B700D456C5 /* ExpositionError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		26762AA128DAA84F00D43477 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +129,7 @@
 		C79FF4B32589F401005FB0FD /* Expo1900 */ = {
 			isa = PBXGroup;
 			children = (
+				265AFE6E28E2B56F00D456C5 /* Error */,
 				268C187A28D988C100981105 /* Model */,
 				26762AA128DAA84F00D43477 /* View */,
 				26762AA228DAA85500D43477 /* Controller */,
@@ -239,6 +250,7 @@
 				C79FF4B92589F401005FB0FD /* ViewController.swift in Sources */,
 				268C187C28D98A6900981105 /* Relic.swift in Sources */,
 				C79FF4B52589F401005FB0FD /* AppDelegate.swift in Sources */,
+				265AFE7028E2B5B700D456C5 /* ExpositionError.swift in Sources */,
 				C79FF4B72589F401005FB0FD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

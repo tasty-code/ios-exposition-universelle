@@ -11,25 +11,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        expositionData = expositionParsingData()
-        isNotNilData(data: expositionData)
+        expositionData = try? expositionParsingData()
     }
     
-    func expositionParsingData() -> Exposition? {
+    func expositionParsingData() throws -> Exposition? {
         guard let expositionDataAsset = NSDataAsset(name: "exposition_universelle_1900") else {
-            return nil
+            throw ExpositionError.parsingError
         }
         let expositionJsonDecoder = JSONDecoder()
         
         let parsingExpositionData = try? expositionJsonDecoder.decode(Exposition.self, from: expositionDataAsset.data)
         
         return parsingExpositionData
-    }
-    
-    func isNotNilData(data: Exposition?) {
-        if data == nil {
-            setUiData()
-        }
     }
     
     func setUiData() {
