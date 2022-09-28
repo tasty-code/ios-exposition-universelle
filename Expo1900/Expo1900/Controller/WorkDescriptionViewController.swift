@@ -8,20 +8,22 @@
 import UIKit
 
 class WorkDescriptionViewController: UIViewController {
+    @IBOutlet weak private var workImageView: UIImageView!
+    @IBOutlet weak private var workLabel: UILabel!
+    
     var workName: String = .empty
     var workImageName: String = .empty
     var workDescription: String = .empty
     
-    @IBOutlet weak private var workImageView: UIImageView!
-    @IBOutlet weak private var workLabel: UILabel!
-    
-    private func settingViewController() {
+    private func configure() {
         navigationItem.title = workName
         workImageView.image = UIImage(named: workImageName)
         workLabel.text = workDescription
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        settingViewController()
+        
+        configure()
     }
 }

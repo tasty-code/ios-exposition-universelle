@@ -8,9 +8,9 @@
 import UIKit
 
 class KoreaWorkListViewController: UIViewController {
-    var items = [Item]()
-    
     @IBOutlet weak var workListTableView: UITableView!
+    
+    var items = [Item]()
     
     private func getItems() throws {
         guard let jsonData: NSDataAsset = NSDataAsset(name: "items") else {
@@ -24,6 +24,7 @@ class KoreaWorkListViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         do {
             try getItems()
         } catch {
@@ -33,13 +34,12 @@ class KoreaWorkListViewController: UIViewController {
         workListTableView.dataSource = self
         self.navigationController?.isNavigationBarHidden = false
     }
-    
 }
 
 extension KoreaWorkListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let descriptionViewContoller = storyboard.instantiateViewController(withIdentifier: "DescriptionView") as? DescriptionViewController else { return }
+        guard let descriptionViewContoller = storyboard.instantiateViewController(withIdentifier: "DescriptionView") as? WorkDescriptionViewController else { return }
         descriptionViewContoller.workName = items[indexPath.row].name
         descriptionViewContoller.workImageName = items[indexPath.row].imageName
         descriptionViewContoller.workDescription = items[indexPath.row].description
@@ -53,7 +53,7 @@ extension KoreaWorkListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = workListTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? WorkListTableViewCell else { return UITableViewCell() }
+        guard let cell = workListTableView.dequeueReusableCell(withIdentifier: "workListCell", for: indexPath) as? WorkListTableViewCell else { return UITableViewCell() }
         cell.workImageView.image = UIImage(named: items[indexPath.row].imageName)
         cell.workNameLabel.text = items[indexPath.row].name
         cell.workShortDescription.text = items[indexPath.row].shortDescription
