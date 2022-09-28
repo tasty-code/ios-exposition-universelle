@@ -7,14 +7,14 @@
 import UIKit
 
 class StartViewController: UIViewController {
-    var exposition: Exposition?
-
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var visitorsLabel: UILabel!
     @IBOutlet weak private var locationLabel: UILabel!
     @IBOutlet weak private var durationLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    var exposition: Exposition?
+
     private func getExposition() throws {
         guard let jsonData: NSDataAsset = NSDataAsset(name: "exposition") else {
             throw ExpoError.NilPersingData
