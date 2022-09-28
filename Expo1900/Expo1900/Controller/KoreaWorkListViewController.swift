@@ -22,6 +22,7 @@ class KoreaWorkListViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,17 +35,21 @@ class KoreaWorkListViewController: UIViewController {
         workListTableView.dataSource = self
         self.navigationController?.isNavigationBarHidden = false
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "moveToDescription" {
+            if let destication = segue.destination as? WorkDescriptionViewController {
+                if let selectedIndex = self.workListTableView.indexPathForSelectedRow?.row {
+                    
+                    destication.item = items[selectedIndex]
+                }
+            }
+        }
+    }
 }
 
 extension KoreaWorkListViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let descriptionViewContoller = storyboard.instantiateViewController(withIdentifier: "DescriptionView") as? WorkDescriptionViewController else { return }
-        descriptionViewContoller.workName = items[indexPath.row].name
-        descriptionViewContoller.workImageName = items[indexPath.row].imageName
-        descriptionViewContoller.workDescription = items[indexPath.row].description
-        self.navigationController?.pushViewController(descriptionViewContoller, animated: true)
-    }
 }
 
 extension KoreaWorkListViewController: UITableViewDataSource {
@@ -55,9 +60,7 @@ extension KoreaWorkListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = workListTableView.dequeueReusableCell(withIdentifier: "workListCell", for: indexPath) as? WorkListTableViewCell else { return UITableViewCell() }
         
-        cell.workImageView.image = UIImage(named: items[indexPath.row].imageName)
-        cell.workNameLabel.text = items[indexPath.row].name
-        cell.workShortDescription.text = items[indexPath.row].shortDescription
+        cell.configure(items[indexPath.row])
         
         return cell
     }

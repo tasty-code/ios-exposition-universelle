@@ -81,6 +81,7 @@
                                             <outlet property="workImageView" destination="n3M-Ov-1zi" id="q2J-7I-6vt"/>
                                             <outlet property="workNameLabel" destination="zec-HE-v6A" id="now-xs-0UE"/>
                                             <outlet property="workShortDescription" destination="UKn-CM-cSU" id="ALo-nE-IzB"/>
+                                            <segue destination="XyX-aS-y2x" kind="push" identifier="moveToDescription" id="Caz-xe-Mhs"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -117,7 +118,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ylC-qC-LMh">
-                                <rect key="frame" x="0.0" y="44" width="390" height="800"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="756"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rz-FI-udz">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="235.33333333333334"/>
@@ -169,6 +170,7 @@
                             <constraint firstAttribute="bottom" secondItem="ylC-qC-LMh" secondAttribute="bottom" id="yWB-Kg-f67"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="oSe-A0-KYQ"/>
                     <connections>
                         <outlet property="workImageView" destination="hL3-hx-9LO" id="FFx-Mm-fJX"/>
                         <outlet property="workLabel" destination="qmX-H2-Wfx" id="ahn-fw-udq"/>

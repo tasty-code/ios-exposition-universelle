@@ -11,14 +11,13 @@ class WorkDescriptionViewController: UIViewController {
     @IBOutlet weak private var workImageView: UIImageView!
     @IBOutlet weak private var workLabel: UILabel!
     
-    var workName: String = .empty
-    var workImageName: String = .empty
-    var workDescription: String = .empty
+    var item: Item?
     
     private func configure() {
-        navigationItem.title = workName
-        workImageView.image = UIImage(named: workImageName)
-        workLabel.text = workDescription
+        guard let nonOptionalItem = item else { return }
+        navigationItem.title = nonOptionalItem.name
+        workImageView.image = UIImage(named: nonOptionalItem.imageName)
+        workLabel.text = nonOptionalItem.description
         
     }
     override func viewDidLoad() {

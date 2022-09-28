@@ -13,9 +13,19 @@ class WorkListTableViewCell: UITableViewCell {
     @IBOutlet weak var workNameLabel: UILabel!
     @IBOutlet weak var workShortDescription: UILabel!
     
+    var item: Item?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        
+    }
+    
+    func configure(_ item: Item) {
+        self.item = item
+        guard let nonOptionalItem = self.item else { return }
+        workImageView.image = UIImage(named: nonOptionalItem.imageName)
+        workNameLabel.text = nonOptionalItem.name
+        workShortDescription.text = nonOptionalItem.shortDescription
     }
     
     override func prepareForReuse() {
