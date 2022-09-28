@@ -9,7 +9,6 @@ import UIKit
 
 class WorkListTableViewCell: UITableViewCell {
 
-    
     @IBOutlet weak var workImageView: UIImageView!
     @IBOutlet weak var workNameLabel: UILabel!
     @IBOutlet weak var workShortDescription: UILabel!
@@ -21,9 +20,11 @@ class WorkListTableViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        
         workImageView.image = nil
-        workNameLabel.text = ""
-        workShortDescription.text = ""
+        workNameLabel.text = .empty
+        workShortDescription.text = .empty
+        
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

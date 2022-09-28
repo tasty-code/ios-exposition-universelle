@@ -108,10 +108,10 @@
             </objects>
             <point key="canvasLocation" x="-1358.4615384615383" y="91.706161137440759"/>
         </scene>
-        <!--Description View Controller-->
+        <!--Work Description View Controller-->
         <scene sceneID="T9H-IN-En3">
             <objects>
-                <viewController storyboardIdentifier="DescriptionView" id="XyX-aS-y2x" customClass="DescriptionViewController" customModule="Expo1900" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DescriptionView" id="XyX-aS-y2x" customClass="WorkDescriptionViewController" customModule="Expo1900" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ejC-Jh-ILf">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

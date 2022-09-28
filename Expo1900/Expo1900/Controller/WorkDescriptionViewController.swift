@@ -7,10 +7,10 @@
 
 import UIKit
 
-class DescriptionViewController: UIViewController {
-    var workName: String = ""
-    var workImageName: String = ""
-    var workDescription: String = ""
+class WorkDescriptionViewController: UIViewController {
+    var workName: String = .empty
+    var workImageName: String = .empty
+    var workDescription: String = .empty
     
     @IBOutlet weak private var workImageView: UIImageView!
     @IBOutlet weak private var workLabel: UILabel!
