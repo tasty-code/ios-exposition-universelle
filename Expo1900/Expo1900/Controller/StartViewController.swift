@@ -20,7 +20,7 @@ class StartViewController: UIViewController {
             throw ExpoError.NilPersingData
         }
         do {
-            exposition = try PerserJSON().persingExpositionJSON(jsonData)
+            exposition = try ParserJSON().parsingExpositionJSON(jsonData)
         } catch {
             print(error.localizedDescription)
         }
@@ -43,12 +43,13 @@ class StartViewController: UIViewController {
             descriptionLabel.text = expodata.description
         }
         self.navigationController?.isNavigationBarHidden = true
-        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
     }
+    
     func DecimalWon(value: Int) -> String{
             let numberFormatter = NumberFormatter()
             numberFormatter.numberStyle = .decimal
@@ -56,10 +57,11 @@ class StartViewController: UIViewController {
             
             return result
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setViewcontoller()
         setView()
     }
-    
 }

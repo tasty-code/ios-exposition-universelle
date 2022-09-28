@@ -10,7 +10,7 @@
 		351BA12328DD92B20001DA23 /* WorkDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351BA12228DD92B20001DA23 /* WorkDescriptionViewController.swift */; };
 		353B1D0128DD4F17009D1F87 /* WorkListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B1D0028DD4F17009D1F87 /* WorkListTableViewCell.swift */; };
 		358DA93928DAB33900904F9D /* ExpoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DA93828DAB33900904F9D /* ExpoError.swift */; };
-		358DA93B28DAB50B00904F9D /* PerserJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DA93A28DAB50B00904F9D /* PerserJSON.swift */; };
+		358DA93B28DAB50B00904F9D /* ParserJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DA93A28DAB50B00904F9D /* ParserJSON.swift */; };
 		358DA93D28DAB77900904F9D /* KoreaWorkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DA93C28DAB77900904F9D /* KoreaWorkListViewController.swift */; };
 		359B256728E3D31300F9F5AC /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359B256628E3D31300F9F5AC /* Extension+String.swift */; };
 		35A4228A28D97B2B008CB641 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4228928D97B2B008CB641 /* Item.swift */; };
@@ -28,7 +28,7 @@
 		351BA12228DD92B20001DA23 /* WorkDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDescriptionViewController.swift; sourceTree = "<group>"; };
 		353B1D0028DD4F17009D1F87 /* WorkListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListTableViewCell.swift; sourceTree = "<group>"; };
 		358DA93828DAB33900904F9D /* ExpoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoError.swift; sourceTree = "<group>"; };
-		358DA93A28DAB50B00904F9D /* PerserJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerserJSON.swift; sourceTree = "<group>"; };
+		358DA93A28DAB50B00904F9D /* ParserJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserJSON.swift; sourceTree = "<group>"; };
 		358DA93C28DAB77900904F9D /* KoreaWorkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoreaWorkListViewController.swift; sourceTree = "<group>"; };
 		359B256628E3D31300F9F5AC /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
 		35A4228928D97B2B008CB641 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 			children = (
 				35A4228928D97B2B008CB641 /* Item.swift */,
 				35C9CB4628DAAB5100A81043 /* Exposition.swift */,
-				358DA93A28DAB50B00904F9D /* PerserJSON.swift */,
+				358DA93A28DAB50B00904F9D /* ParserJSON.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -222,7 +222,7 @@
 				358DA93D28DAB77900904F9D /* KoreaWorkListViewController.swift in Sources */,
 				359B256728E3D31300F9F5AC /* Extension+String.swift in Sources */,
 				358DA93928DAB33900904F9D /* ExpoError.swift in Sources */,
-				358DA93B28DAB50B00904F9D /* PerserJSON.swift in Sources */,
+				358DA93B28DAB50B00904F9D /* ParserJSON.swift in Sources */,
 				35A4228A28D97B2B008CB641 /* Item.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

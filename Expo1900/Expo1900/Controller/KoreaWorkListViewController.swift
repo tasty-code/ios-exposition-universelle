@@ -17,7 +17,7 @@ class KoreaWorkListViewController: UIViewController {
             throw ExpoError.InvalidNSAssetData
         }
         do {
-            items = try PerserJSON().persingItemJSON(jsonData)
+            items = try ParserJSON().parsingItemJSON(jsonData)
         } catch {
             print(error.localizedDescription)
         }
@@ -54,12 +54,12 @@ extension KoreaWorkListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = workListTableView.dequeueReusableCell(withIdentifier: "workListCell", for: indexPath) as? WorkListTableViewCell else { return UITableViewCell() }
+        
         cell.workImageView.image = UIImage(named: items[indexPath.row].imageName)
         cell.workNameLabel.text = items[indexPath.row].name
         cell.workShortDescription.text = items[indexPath.row].shortDescription
+        
         return cell
     }
-    
-    
 }
 
