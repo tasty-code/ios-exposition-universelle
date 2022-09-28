@@ -9,8 +9,7 @@ import UIKit
 class ViewController: UIViewController {
 
     var exhibitionData: Exhibition?
-    var workPieceInformationData: [WorkPieceInformation]?
-    var workPieceInformationList = [WorkPieceInformation]()
+    var workPieceInformationData = [WorkPieceInformation]()
     
     func exhibitionDataJsonParsingData() {
         guard let dataAsset = NSDataAsset(name: "exposition_universelle_1900") else { return }
@@ -21,7 +20,7 @@ class ViewController: UIViewController {
     func workPieceInformationJsonParsingData() {
         guard let dataAsset = NSDataAsset(name: "items") else { return }
         let jsonDecoder = JSONDecoder()
-        workPieceInformationData = try? jsonDecoder.decode([WorkPieceInformation].self, from: dataAsset.data)
+        workPieceInformationData = try! jsonDecoder.decode([WorkPieceInformation].self, from: dataAsset.data)
     }
     
     override func viewDidLoad() {
