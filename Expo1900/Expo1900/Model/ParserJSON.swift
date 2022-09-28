@@ -5,7 +5,6 @@
 //  Created by 정재근 on 2022/09/21.
 //
 
-import Foundation
 import UIKit
 
 class ParserJSON {
