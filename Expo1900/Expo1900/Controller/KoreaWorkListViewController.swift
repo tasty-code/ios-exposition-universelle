@@ -59,7 +59,7 @@ extension KoreaWorkListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = workListTableView.dequeueReusableCell(withIdentifier: "workListCell", for: indexPath) as? WorkListTableViewCell else { return UITableViewCell() }
-        
+        cell.selectionStyle = .none
         cell.configure(items[indexPath.row])
         
         return cell
