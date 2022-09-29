@@ -29,7 +29,7 @@ class ExpoLaunchViewController: UIViewController {
         } catch {
             print(error.localizedDescription)
         }
-
+        
         if let expoInfo = info {
             expoTitle.text = expoInfo.title
             expoImage.image = UIImage(named: "poster")
@@ -39,7 +39,9 @@ class ExpoLaunchViewController: UIViewController {
             expoDescription.text = expoInfo.description
         }
     }
-
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
 }
 
