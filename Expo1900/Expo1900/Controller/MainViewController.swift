@@ -13,12 +13,11 @@ class MainViewController: UIViewController {
     @IBOutlet weak private var durationLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    var exposition: Exposition?
+    private var exposition: Exposition?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setViewcontoller()
-        setView()
+        configure()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,15 +36,14 @@ class MainViewController: UIViewController {
         }
     }
     
-    private func setViewcontoller() {
+    private func configure() {
+        
         do {
             try getExposition()
         } catch {
             print(error.localizedDescription)
         }
-    }
-    
-    private func setView() {
+        
         if let expodata = exposition {
             titleLabel.text = expodata.title
             visitorsLabel.text = "방문객 : \(DecimalWon(value: expodata.visitors))"
@@ -53,6 +51,7 @@ class MainViewController: UIViewController {
             durationLabel.text = "개최 기간 : \(expodata.duration)"
             descriptionLabel.text = expodata.description
         }
+        
         self.navigationController?.isNavigationBarHidden = true
     }
     
