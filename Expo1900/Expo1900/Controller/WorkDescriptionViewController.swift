@@ -10,18 +10,23 @@ import UIKit
 class WorkDescriptionViewController: UIViewController {
     @IBOutlet weak private var workImageView: UIImageView!
     @IBOutlet weak private var workLabel: UILabel!
+    private var item: Item?
     
-    var item: Item?
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configure()
+    }
+    
+    func setItem(item: Item) {
+        self.item = item
+    }
     
     private func configure() {
         guard let nonOptionalItem = item else { return }
+        
         navigationItem.title = nonOptionalItem.name
         workImageView.image = UIImage(named: nonOptionalItem.imageName)
         workLabel.text = nonOptionalItem.description
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
         
-        configure()
     }
 }

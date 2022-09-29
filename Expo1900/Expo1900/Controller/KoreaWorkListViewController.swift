@@ -31,25 +31,19 @@ class KoreaWorkListViewController: UIViewController {
         } catch {
             print(error.localizedDescription)
         }
-        workListTableView.delegate = self
         workListTableView.dataSource = self
         self.navigationController?.isNavigationBarHidden = false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "moveToDescription" {
             if let destication = segue.destination as? WorkDescriptionViewController {
                 if let selectedIndex = self.workListTableView.indexPathForSelectedRow?.row {
-                    
-                    destication.item = items[selectedIndex]
+                    destication.setItem(item: items[selectedIndex])
                 }
             }
         }
     }
-}
-
-extension KoreaWorkListViewController: UITableViewDelegate {
 }
 
 extension KoreaWorkListViewController: UITableViewDataSource {
@@ -58,7 +52,11 @@ extension KoreaWorkListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = workListTableView.dequeueReusableCell(withIdentifier: "workListCell", for: indexPath) as? WorkListTableViewCell else { return UITableViewCell() }
+        let identifier = "workListCell"
+        guard let cell = workListTableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? WorkListTableViewCell else {
+            return UITableViewCell()
+        }
+        
         cell.selectionStyle = .none
         cell.configure(items[indexPath.row])
         
