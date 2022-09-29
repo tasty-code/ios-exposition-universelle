@@ -15,6 +15,7 @@
 		C79FF4C12589F404005FB0FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C79FF4BF2589F404005FB0FD /* LaunchScreen.storyboard */; };
 		FB05A36F28E2CFAF00B3F28E /* ExpoItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB05A36E28E2CFAF00B3F28E /* ExpoItemViewController.swift */; };
 		FB1FB6A228DA948900F6B390 /* JSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1FB6A128DA948900F6B390 /* JSONModel.swift */; };
+		FB2501D728E52CB30070BAD9 /* ExpoItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2501D628E52CB30070BAD9 /* ExpoItemDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C79FF4C22589F404005FB0FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB05A36E28E2CFAF00B3F28E /* ExpoItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoItemViewController.swift; sourceTree = "<group>"; };
 		FB1FB6A128DA948900F6B390 /* JSONModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONModel.swift; sourceTree = "<group>"; };
+		FB2501D628E52CB30070BAD9 /* ExpoItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoItemDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				C79FF4B42589F401005FB0FD /* AppDelegate.swift */,
 				C79FF4B62589F401005FB0FD /* SceneDelegate.swift */,
 				FB05A36E28E2CFAF00B3F28E /* ExpoItemViewController.swift */,
+				FB2501D628E52CB30070BAD9 /* ExpoItemDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB2501D728E52CB30070BAD9 /* ExpoItemDetailViewController.swift in Sources */,
 				FB1FB6A228DA948900F6B390 /* JSONModel.swift in Sources */,
 				FB05A36F28E2CFAF00B3F28E /* ExpoItemViewController.swift in Sources */,
 				C79FF4B92589F401005FB0FD /* ExpoLaunchViewController.swift in Sources */,
