@@ -18,7 +18,6 @@ class WorkDescriptionViewController: UIViewController {
         navigationItem.title = nonOptionalItem.name
         workImageView.image = UIImage(named: nonOptionalItem.imageName)
         workLabel.text = nonOptionalItem.description
-        
     }
     override func viewDidLoad() {
         super.viewDidLoad()

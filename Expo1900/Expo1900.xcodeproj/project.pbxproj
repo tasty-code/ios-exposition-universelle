@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		351BA12328DD92B20001DA23 /* WorkDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351BA12228DD92B20001DA23 /* WorkDescriptionViewController.swift */; };
+		3520990628E537A500038E8B /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3520990528E537A500038E8B /* Extension+String.swift */; };
 		353B1D0128DD4F17009D1F87 /* WorkListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B1D0028DD4F17009D1F87 /* WorkListTableViewCell.swift */; };
 		358DA93928DAB33900904F9D /* ExpoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DA93828DAB33900904F9D /* ExpoError.swift */; };
 		358DA93B28DAB50B00904F9D /* ParserJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358DA93A28DAB50B00904F9D /* ParserJSON.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		351BA12228DD92B20001DA23 /* WorkDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDescriptionViewController.swift; sourceTree = "<group>"; };
+		3520990528E537A500038E8B /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
 		353B1D0028DD4F17009D1F87 /* WorkListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListTableViewCell.swift; sourceTree = "<group>"; };
 		358DA93828DAB33900904F9D /* ExpoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoError.swift; sourceTree = "<group>"; };
 		358DA93A28DAB50B00904F9D /* ParserJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserJSON.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3520990428E5379500038E8B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3520990528E537A500038E8B /* Extension+String.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		353B1CFF28DD4F00009D1F87 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +131,7 @@
 		C79FF4B32589F401005FB0FD /* Expo1900 */ = {
 			isa = PBXGroup;
 			children = (
+				3520990428E5379500038E8B /* Extension */,
 				358DA93728DAB32700904F9D /* Error */,
 				35A4228B28D97DDE008CB641 /* items.json */,
 				35A4228628D965F2008CB641 /* Model */,
@@ -209,6 +220,7 @@
 				C79FF4B72589F401005FB0FD /* SceneDelegate.swift in Sources */,
 				353B1D0128DD4F17009D1F87 /* WorkListTableViewCell.swift in Sources */,
 				358DA93D28DAB77900904F9D /* KoreaWorkListViewController.swift in Sources */,
+				3520990628E537A500038E8B /* Extension+String.swift in Sources */,
 				358DA93928DAB33900904F9D /* ExpoError.swift in Sources */,
 				358DA93B28DAB50B00904F9D /* ParserJSON.swift in Sources */,
 				35A4228A28D97B2B008CB641 /* Item.swift in Sources */,
