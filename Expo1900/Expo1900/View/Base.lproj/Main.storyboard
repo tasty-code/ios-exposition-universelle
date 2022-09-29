@@ -183,7 +183,7 @@
         <!--메인-->
         <scene sceneID="HLn-pL-yNj">
             <objects>
-                <viewController id="9V9-mJ-m3f" customClass="StartViewController" customModule="Expo1900" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9V9-mJ-m3f" customClass="MainViewController" customModule="Expo1900" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wgy-9g-mBo">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

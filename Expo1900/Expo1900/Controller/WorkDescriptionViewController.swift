@@ -10,6 +10,7 @@ import UIKit
 class WorkDescriptionViewController: UIViewController {
     @IBOutlet weak private var workImageView: UIImageView!
     @IBOutlet weak private var workLabel: UILabel!
+    
     private var item: Item?
     
     override func viewDidLoad() {

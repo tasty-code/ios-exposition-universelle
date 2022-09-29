@@ -6,7 +6,7 @@
 
 import UIKit
 
-class StartViewController: UIViewController {
+class MainViewController: UIViewController {
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var visitorsLabel: UILabel!
     @IBOutlet weak private var locationLabel: UILabel!
@@ -15,6 +15,17 @@ class StartViewController: UIViewController {
     
     var exposition: Exposition?
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setViewcontoller()
+        setView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     private func getExposition() throws {
         guard let jsonData: NSDataAsset = NSDataAsset(name: "exposition") else {
             throw ExpoError.NilPersingData
@@ -45,23 +56,11 @@ class StartViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = true
-    }
-    
     func DecimalWon(value: Int) -> String{
             let numberFormatter = NumberFormatter()
             numberFormatter.numberStyle = .decimal
             let result = numberFormatter.string(from: NSNumber(value: value))! + " 명"
             
             return result
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setViewcontoller()
-        setView()
     }
 }

@@ -12,17 +12,6 @@ class KoreaWorkListViewController: UIViewController {
     
     var items = [Item]()
     
-    private func getItems() throws {
-        guard let jsonData: NSDataAsset = NSDataAsset(name: "items") else {
-            throw ExpoError.InvalidNSAssetData
-        }
-        do {
-            items = try ParserJSON().parsingItemJSON(jsonData)
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +22,17 @@ class KoreaWorkListViewController: UIViewController {
         }
         workListTableView.dataSource = self
         self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    private func getItems() throws {
+        guard let jsonData: NSDataAsset = NSDataAsset(name: "items") else {
+            throw ExpoError.InvalidNSAssetData
+        }
+        do {
+            items = try ParserJSON().parsingItemJSON(jsonData)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
