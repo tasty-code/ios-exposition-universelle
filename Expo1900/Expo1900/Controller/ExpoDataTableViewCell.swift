@@ -10,11 +10,11 @@ import UIKit
 class ExpoDataTableViewCell: UITableViewCell {
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var descriptionLabel: UILabel!
-    @IBOutlet weak private var workImage: UIImageView!
+    @IBOutlet weak private var workImageView: UIImageView!
     
     func configure(item: ExpositionData) {
         titleLabel.text = item.name
         descriptionLabel.text = item.shortDesc
-        workImage.image = UIImage(named: item.imageName)
+        workImageView.image = UIImage(named: item.imageName)
     }
 }
