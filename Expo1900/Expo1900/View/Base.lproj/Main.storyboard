@@ -162,9 +162,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="descriptionLabel" destination="MmY-bz-JaG" id="Ikd-CZ-9Ha"/>
-                                            <outlet property="titleLabel" destination="LPM-ef-xyc" id="yrq-dH-O4e"/>
-                                            <outlet property="workImage" destination="RCv-fd-qw8" id="eOD-8u-meS"/>
+                                            <outlet property="descriptionLabel" destination="MmY-bz-JaG" id="gNS-Ge-9xF"/>
+                                            <outlet property="titleLabel" destination="LPM-ef-xyc" id="Gv5-Vh-Kz7"/>
+                                            <outlet property="workImage" destination="RCv-fd-qw8" id="Mhy-5Q-8xg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
