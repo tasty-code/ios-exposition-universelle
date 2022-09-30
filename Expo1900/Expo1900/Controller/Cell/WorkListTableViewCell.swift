@@ -9,9 +9,9 @@ import UIKit
 
 class WorkListTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var workImageView: UIImageView!
-    @IBOutlet weak var workNameLabel: UILabel!
-    @IBOutlet weak var workShortDescription: UILabel!
+    @IBOutlet weak private var workImageView: UIImageView!
+    @IBOutlet weak private var workNameLabel: UILabel!
+    @IBOutlet weak private var workShortDescription: UILabel!
     
     
     func configure(_ item: Item) {
