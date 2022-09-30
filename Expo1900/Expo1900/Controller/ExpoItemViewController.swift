@@ -8,18 +8,18 @@
 import UIKit
 
 class ExpoItemViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    var items: [ExpositionData]? = nil
+    var items: [ExpositionData] = []
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items?.count ?? 0
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: TableViewCell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! TableViewCell
+        guard let cell: ExpoDataTableViewCell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as? ExpoDataTableViewCell else {
+            return UITableViewCell()
+        }
         
-        cell.titleLabel.text = items?[indexPath.row].name
-        cell.descriptionLabel.text = items?[indexPath.row].shortDesc
-        cell.workImage.image = UIImage(named: items?[indexPath.row].imageName ?? "")
+        cell.configure(item: items[indexPath.row])
         
         return cell
     }
@@ -28,7 +28,7 @@ class ExpoItemViewController: UIViewController, UITableViewDataSource, UITableVi
         guard let pushVC: ExpoItemDetailViewController = self.storyboard?.instantiateViewController(identifier: "expoItemDetailPage") else {
             return
         }
-        pushVC.item = items?[indexPath.row]
+        pushVC.item = items[indexPath.row]
         
         self.navigationController?.pushViewController(pushVC, animated: true)
     }
