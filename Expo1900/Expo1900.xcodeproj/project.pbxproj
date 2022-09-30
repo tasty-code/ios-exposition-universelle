@@ -88,9 +88,9 @@
 			children = (
 				AAB2963E28E6ABAE0017ABB7 /* Cell */,
 				C79FF4B62589F401005FB0FD /* SceneDelegate.swift */,
-				AAB2963F28E6ABE10017ABB7 /* ItemTableViewCell.swift */,
 				C79FF4B42589F401005FB0FD /* AppDelegate.swift */,
 				C79FF4B82589F401005FB0FD /* ExpositionViewController.swift */,
+				AAB2963F28E6ABE10017ABB7 /* ItemTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

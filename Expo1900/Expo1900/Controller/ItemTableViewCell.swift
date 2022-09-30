@@ -9,8 +9,13 @@ import UIKit
 
 class ItemTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var myImage: UIImageView!
-
+    @IBOutlet weak var itemImage: UIImageView!
+    @IBOutlet weak var itemName: UILabel!
+    @IBOutlet weak var shortDescription: UILabel!
+    
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
