@@ -12,8 +12,6 @@ class MainViewController: UIViewController {
     @IBOutlet weak private var locationLabel: UILabel!
     @IBOutlet weak private var durationLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
-    private var exposition: Exposition?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,44 +23,18 @@ class MainViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
     }
     
-    private func getExposition() throws {
-        guard let jsonData: NSDataAsset = NSDataAsset(name: "exposition") else {
-            throw ExpoError.NilPersingData
-        }
-        do {
-            exposition = try ParserJSON().parsingExpositionJSON(jsonData)
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
-    
+
     private func configure() {
+        let exposion = ParsedExposion()
         
-        do {
-            try getExposition()
-        } catch {
-            print(error.localizedDescription)
-        }
-        
-        if let expodata = exposition {
-            titleLabel.text = expodata.title
-            visitorsLabel.text = "방문객 : \(DecimalWon(value: expodata.visitors))"
-            locationLabel.text = "개최지 : \(expodata.location)"
-            durationLabel.text = "개최 기간 : \(expodata.duration)"
-            descriptionLabel.text = expodata.description
-        }
+        titleLabel.text = exposion.title
+        visitorsLabel.text = exposion.visitors
+        locationLabel.text = exposion.location
+        durationLabel.text = exposion.duration
+        descriptionLabel.text = exposion.description
         
         self.navigationController?.isNavigationBarHidden = true
     }
     
-    func DecimalWon(value: Int) -> String{
-        var returnValue: String = ""
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        if let result = numberFormatter.string(from: NSNumber(value: value)) {
-            returnValue = result + " 명"
-            return returnValue
-        }
-        return returnValue
-    }
+    
 }

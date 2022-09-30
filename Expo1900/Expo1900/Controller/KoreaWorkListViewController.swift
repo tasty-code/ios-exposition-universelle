@@ -10,31 +10,20 @@ import UIKit
 class KoreaWorkListViewController: UIViewController {
     @IBOutlet weak var workListTableView: UITableView!
     
-    var items = [Item]()
+    private var items = [Item]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        do {
-            try getItems()
-        } catch {
-            print(error.localizedDescription)
-        }
+        configure()
+    }
+    
+    private func configure() {
+        guard let parsedItems = ParsedItem().items else { return }
+        items = parsedItems
         workListTableView.dataSource = self
         self.navigationController?.isNavigationBarHidden = false
     }
-    
-    private func getItems() throws {
-        guard let jsonData: NSDataAsset = NSDataAsset(name: "items") else {
-            throw ExpoError.InvalidNSAssetData
-        }
-        do {
-            items = try ParserJSON().parsingItemJSON(jsonData)
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
-    
+   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "moveToDescription" {
             if let destication = segue.destination as? WorkDescriptionViewController {
