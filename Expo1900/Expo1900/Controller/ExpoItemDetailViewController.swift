@@ -8,8 +8,8 @@
 import UIKit
 
 class ExpoItemDetailViewController: UIViewController {
-    @IBOutlet weak var detailImage: UIImageView!
-    @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak private var detailImage: UIImageView!
+    @IBOutlet weak private var detailLabel: UILabel!
     var item: ExpositionData? = nil
     
     override func viewDidLoad() {
