@@ -20,7 +20,7 @@ class WorkListTableViewCell: UITableViewCell {
         workShortDescription.text = item.shortDescription
         
     }
-    
+
     override func prepareForReuse() {
         super.prepareForReuse()
         workImageView.image = nil

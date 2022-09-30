@@ -56,10 +56,13 @@ class MainViewController: UIViewController {
     }
     
     func DecimalWon(value: Int) -> String{
-            let numberFormatter = NumberFormatter()
-            numberFormatter.numberStyle = .decimal
-            let result = numberFormatter.string(from: NSNumber(value: value))! + " 명"
-            
-            return result
+        var returnValue: String = ""
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        if let result = numberFormatter.string(from: NSNumber(value: value)) {
+            returnValue = result + " 명"
+            return returnValue
+        }
+        return returnValue
     }
 }
