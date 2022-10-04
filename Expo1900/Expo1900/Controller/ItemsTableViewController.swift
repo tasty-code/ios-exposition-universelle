@@ -29,15 +29,9 @@ extension ItemsTableViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        print("실행")
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ItemTableViewCell
-//            print("가드렛 else")
-//            let errorCell = ItemTableViewCell()
-//            errorCell.backgroundColor = .yellow
-//            errorCell.layer.borderColor = CGColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1.0)
-//            return errorCell
-        
-//        print("가드렛 성공")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ItemTableViewCell else {
+            return UITableViewCell()
+        }
         cell.itemName.text = itemList[indexPath.row].name
         cell.itemImage.image = UIImage(named: itemList[indexPath.row].image)
         cell.shortDescription.text = itemList[indexPath.row].shortDescription
