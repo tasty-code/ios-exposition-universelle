@@ -7,12 +7,12 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    @IBOutlet weak var expoTitle: UILabel!
-    @IBOutlet weak var expoImage: UIImageView!
-    @IBOutlet weak var expoVisitorCount: UILabel!
-    @IBOutlet weak var expoVenueCity: UILabel!
-    @IBOutlet weak var expoDurationEvent: UILabel!
-    @IBOutlet weak var expoDescription: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var visitorCountLabel: UILabel!
+    @IBOutlet weak var venueCityLabel: UILabel!
+    @IBOutlet weak var durationEventLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     var info: ExpoDesc? = nil
     
@@ -31,12 +31,12 @@ class MainViewController: UIViewController {
         }
         
         if let expoInfo = info {
-            expoTitle.text = expoInfo.title
-            expoImage.image = UIImage(named: "poster")
-            expoVisitorCount.text = ": " + String(expoInfo.visitors)
-            expoVenueCity.text = ": " + expoInfo.location
-            expoDurationEvent.text = ": " + expoInfo.duration
-            expoDescription.text = expoInfo.description
+            titleLabel.text = expoInfo.title
+            imageView.image = UIImage(named: "poster")
+            visitorCountLabel.text = ": " + String(expoInfo.visitors)
+            venueCityLabel.text = ": " + expoInfo.location
+            durationEventLabel.text = ": " + expoInfo.duration
+            descriptionLabel.text = expoInfo.description
         }
     }
     

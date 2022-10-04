@@ -108,12 +108,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="메인" id="O5l-jf-7Cq"/>
                     <connections>
-                        <outlet property="expoDescription" destination="677-yd-4uz" id="UXj-kW-dUb"/>
-                        <outlet property="expoDurationEvent" destination="S0a-P8-rpx" id="T37-I0-bqw"/>
-                        <outlet property="expoImage" destination="UzW-ek-iH0" id="n2B-fz-ikd"/>
-                        <outlet property="expoTitle" destination="VPD-al-eP0" id="DyO-rq-45Q"/>
-                        <outlet property="expoVenueCity" destination="Mvd-eX-gTV" id="ter-ki-yyc"/>
-                        <outlet property="expoVisitorCount" destination="UTR-Eq-G8R" id="RYN-z4-XU7"/>
+                        <outlet property="descriptionLabel" destination="677-yd-4uz" id="wmS-4r-kNn"/>
+                        <outlet property="durationEventLabel" destination="S0a-P8-rpx" id="kE9-Uf-gEh"/>
+                        <outlet property="imageView" destination="UzW-ek-iH0" id="8zp-fw-cFJ"/>
+                        <outlet property="titleLabel" destination="VPD-al-eP0" id="K1b-JW-fXz"/>
+                        <outlet property="venueCityLabel" destination="Mvd-eX-gTV" id="KM2-e5-IT5"/>
+                        <outlet property="visitorCountLabel" destination="UTR-Eq-G8R" id="4am-7X-Rnd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
