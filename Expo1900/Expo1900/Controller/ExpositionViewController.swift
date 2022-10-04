@@ -25,7 +25,7 @@ class ExpositionViewController: UIViewController {
     
     func expositionParsingData() throws -> Exposition? {
         guard let expositionDataAsset = NSDataAsset(name: "exposition_universelle_1900") else {
-            throw ExpositionError.parsingError
+            throw ParsingError.parsingError
         }
         
         let expositionJsonDecoder = JSONDecoder()
@@ -50,21 +50,5 @@ class ExpositionViewController: UIViewController {
         }
         
         return result
-    }
-}
-
-extension ExpositionViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
     }
 }

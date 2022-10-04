@@ -5,9 +5,9 @@
 //  Created by Schro on 2022/09/20.
 //
 
-import UIKit
+import Foundation
 
-struct Relic: Decodable {
+struct Item: Decodable {
     let name: String
     let image: String
     let shortDescription: String

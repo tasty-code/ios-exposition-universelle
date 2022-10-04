@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		265AFE7028E2B5B700D456C5 /* ExpositionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AFE6F28E2B5B700D456C5 /* ExpositionError.swift */; };
+		265AFE7028E2B5B700D456C5 /* ParsingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AFE6F28E2B5B700D456C5 /* ParsingError.swift */; };
 		26762AA028DAA70300D43477 /* Exposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26762A9F28DAA70300D43477 /* Exposition.swift */; };
-		268C187C28D98A6900981105 /* Relic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C187B28D98A6900981105 /* Relic.swift */; };
+		268C187C28D98A6900981105 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C187B28D98A6900981105 /* Item.swift */; };
 		26D4399A28DC28B300722F7B /* ExpositionDataParsingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D4399928DC28B300722F7B /* ExpositionDataParsingTest.swift */; };
 		AAB2964028E6ABE10017ABB7 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB2963F28E6ABE10017ABB7 /* ItemTableViewCell.swift */; };
+		AAEB519C28EBF06000CED9EF /* ItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEB519B28EBF06000CED9EF /* ItemsTableViewController.swift */; };
+		AAEB519E28EBF16900CED9EF /* ItemQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEB519D28EBF16900CED9EF /* ItemQueue.swift */; };
+		AAEB51A028EBF39500CED9EF /* QueueTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEB519F28EBF39500CED9EF /* QueueTest.swift */; };
+		AAEB51A228EBF83B00CED9EF /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEB51A128EBF83B00CED9EF /* JSONParser.swift */; };
 		C79FF4B52589F401005FB0FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FF4B42589F401005FB0FD /* AppDelegate.swift */; };
 		C79FF4B72589F401005FB0FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FF4B62589F401005FB0FD /* SceneDelegate.swift */; };
 		C79FF4B92589F401005FB0FD /* ExpositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FF4B82589F401005FB0FD /* ExpositionViewController.swift */; };
@@ -31,12 +35,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		265AFE6F28E2B5B700D456C5 /* ExpositionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpositionError.swift; sourceTree = "<group>"; };
+		265AFE6F28E2B5B700D456C5 /* ParsingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingError.swift; sourceTree = "<group>"; };
 		26762A9F28DAA70300D43477 /* Exposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exposition.swift; sourceTree = "<group>"; };
-		268C187B28D98A6900981105 /* Relic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relic.swift; sourceTree = "<group>"; };
+		268C187B28D98A6900981105 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		26D4399728DC28B300722F7B /* ExpositionDataParsingTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpositionDataParsingTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26D4399928DC28B300722F7B /* ExpositionDataParsingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpositionDataParsingTest.swift; sourceTree = "<group>"; };
 		AAB2963F28E6ABE10017ABB7 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		AAEB519B28EBF06000CED9EF /* ItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableViewController.swift; sourceTree = "<group>"; };
+		AAEB519D28EBF16900CED9EF /* ItemQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemQueue.swift; sourceTree = "<group>"; };
+		AAEB519F28EBF39500CED9EF /* QueueTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTest.swift; sourceTree = "<group>"; };
+		AAEB51A128EBF83B00CED9EF /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		C79FF4B12589F401005FB0FD /* Expo1900.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expo1900.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C79FF4B42589F401005FB0FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C79FF4B62589F401005FB0FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +76,7 @@
 		265AFE6E28E2B56F00D456C5 /* Error */ = {
 			isa = PBXGroup;
 			children = (
-				265AFE6F28E2B5B700D456C5 /* ExpositionError.swift */,
+				265AFE6F28E2B5B700D456C5 /* ParsingError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -91,6 +99,7 @@
 				C79FF4B42589F401005FB0FD /* AppDelegate.swift */,
 				C79FF4B82589F401005FB0FD /* ExpositionViewController.swift */,
 				AAB2963F28E6ABE10017ABB7 /* ItemTableViewCell.swift */,
+				AAEB519B28EBF06000CED9EF /* ItemsTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -99,7 +108,9 @@
 			isa = PBXGroup;
 			children = (
 				26762A9F28DAA70300D43477 /* Exposition.swift */,
-				268C187B28D98A6900981105 /* Relic.swift */,
+				268C187B28D98A6900981105 /* Item.swift */,
+				AAEB519D28EBF16900CED9EF /* ItemQueue.swift */,
+				AAEB51A128EBF83B00CED9EF /* JSONParser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -108,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				26D4399928DC28B300722F7B /* ExpositionDataParsingTest.swift */,
+				AAEB519F28EBF39500CED9EF /* QueueTest.swift */,
 			);
 			path = ExpositionDataParsingTest;
 			sourceTree = "<group>";
@@ -250,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26D4399A28DC28B300722F7B /* ExpositionDataParsingTest.swift in Sources */,
+				AAEB51A028EBF39500CED9EF /* QueueTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +272,12 @@
 			files = (
 				26762AA028DAA70300D43477 /* Exposition.swift in Sources */,
 				C79FF4B92589F401005FB0FD /* ExpositionViewController.swift in Sources */,
-				268C187C28D98A6900981105 /* Relic.swift in Sources */,
+				AAEB519C28EBF06000CED9EF /* ItemsTableViewController.swift in Sources */,
+				268C187C28D98A6900981105 /* Item.swift in Sources */,
+				AAEB519E28EBF16900CED9EF /* ItemQueue.swift in Sources */,
 				C79FF4B52589F401005FB0FD /* AppDelegate.swift in Sources */,
-				265AFE7028E2B5B700D456C5 /* ExpositionError.swift in Sources */,
+				AAEB51A228EBF83B00CED9EF /* JSONParser.swift in Sources */,
+				265AFE7028E2B5B700D456C5 /* ParsingError.swift in Sources */,
 				AAB2964028E6ABE10017ABB7 /* ItemTableViewCell.swift in Sources */,
 				C79FF4B72589F401005FB0FD /* SceneDelegate.swift in Sources */,
 			);
