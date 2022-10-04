@@ -6,7 +6,7 @@
 
 import UIKit
 
-class ExpoLaunchViewController: UIViewController {
+class MainViewController: UIViewController {
     @IBOutlet weak var expoTitle: UILabel!
     @IBOutlet weak var expoImage: UIImageView!
     @IBOutlet weak var expoVisitorCount: UILabel!
