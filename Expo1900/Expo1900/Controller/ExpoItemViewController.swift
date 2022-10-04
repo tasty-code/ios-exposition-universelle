@@ -7,31 +7,8 @@
 
 import UIKit
 
-class ExpoItemViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ExpoItemViewController: UIViewController {
     var items: [ExpositionData] = []
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell: ExpoDataTableViewCell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as? ExpoDataTableViewCell else {
-            return UITableViewCell()
-        }
-        
-        cell.configure(item: items[indexPath.row])
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let pushVC: ExpoItemDetailViewController = self.storyboard?.instantiateViewController(identifier: "expoItemDetailPage") else {
-            return
-        }
-        pushVC.item = items[indexPath.row]
-        
-        self.navigationController?.pushViewController(pushVC, animated: true)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,3 +27,30 @@ class ExpoItemViewController: UIViewController, UITableViewDataSource, UITableVi
         self.navigationController?.isNavigationBarHidden = false
     }
 }
+
+extension ExpoItemViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.items.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell: ExpoDataTableViewCell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as? ExpoDataTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        cell.configure(item: self.items[indexPath.row])
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let pushVC: ExpoItemDetailViewController = self.storyboard?.instantiateViewController(identifier: "expoItemDetailPage") else {
+            return
+        }
+        pushVC.item = self.items[indexPath.row]
+        
+        self.navigationController?.pushViewController(pushVC, animated: true)
+    }
+}
+
+extension ExpoItemViewController: UITableViewDelegate {}
