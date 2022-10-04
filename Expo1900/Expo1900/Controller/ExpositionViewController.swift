@@ -16,21 +16,11 @@ class ExpositionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let expositionData = try? expositionParsingData() else {
+        guard let expositionData = try? JSONParser().getExpositionData() else {
             return
         }
         
         setUiData(from: expositionData)
-    }
-    
-    func expositionParsingData() throws -> Exposition? {
-        guard let expositionDataAsset = NSDataAsset(name: "exposition_universelle_1900") else {
-            throw ParsingError.parsingError
-        }
-        
-        let expositionJsonDecoder = JSONDecoder()
-        let parsingExpositionData = try? expositionJsonDecoder.decode(Exposition.self, from: expositionDataAsset.data)
-        return parsingExpositionData
     }
     
     func setUiData(from data: Exposition) {
