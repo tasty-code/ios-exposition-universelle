@@ -14,7 +14,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var durationEventLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    var expoDesc: ExpoDesc? = nil
+    var expoDescription: ExpoDescription? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,14 +29,14 @@ class MainViewController: UIViewController {
         let jsonDecoder = JSONDecoder()
 
         do {
-            self.expoDesc = try jsonDecoder.decode(ExpoDesc.self, from: expoInfo.data)
+            self.expoDescription = try jsonDecoder.decode(ExpoDescription.self, from: expoInfo.data)
         } catch {
             print(error.localizedDescription)
         }
     }
     
     func updateViewData() {
-        if let expoInfo = expoDesc {
+        if let expoInfo = expoDescription {
             titleLabel.text = expoInfo.title
             imageView.image = UIImage(named: "poster")
             visitorCountLabel.text = ": " + String(expoInfo.visitors)

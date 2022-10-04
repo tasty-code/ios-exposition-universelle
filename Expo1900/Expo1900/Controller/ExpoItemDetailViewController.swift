@@ -18,7 +18,7 @@ class ExpoItemDetailViewController: UIViewController {
         if let itemData = item {
             setTitle(in: itemData.name)
             setDetailImage(in: itemData.imageName)
-            setDetailLabel(in: itemData.desc)
+            setDetailLabel(in: itemData.description)
         }
     }
     

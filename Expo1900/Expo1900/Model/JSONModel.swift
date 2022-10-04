@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ExpoDesc: Decodable {
+struct ExpoDescription: Decodable {
     let title: String
     let visitors: Int
     let location: String
@@ -18,12 +18,13 @@ struct ExpoDesc: Decodable {
 struct ExpositionData: Decodable {
     let name: String
     let imageName: String
-    let shortDesc: String
-    let desc: String
+    let shortDescription: String
+    let description: String
     
     enum CodingKeys: String, CodingKey {
-        case name, desc
+        case name
+        case description = "desc"
         case imageName = "image_name"
-        case shortDesc = "short_desc"
+        case shortDescription = "short_desc"
     }
 }

@@ -14,7 +14,7 @@ class ExpoDataTableViewCell: UITableViewCell {
     
     func configure(item: ExpositionData) {
         titleLabel.text = item.name
-        descriptionLabel.text = item.shortDesc
+        descriptionLabel.text = item.shortDescription
         workImageView.image = UIImage(named: item.imageName)
     }
 }
