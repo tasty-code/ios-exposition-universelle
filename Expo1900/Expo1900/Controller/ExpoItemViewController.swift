@@ -12,7 +12,11 @@ class ExpoItemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        initExpoData()
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    func initExpoData() {
         guard let expoData: NSDataAsset = NSDataAsset.init(name: "items") else {
             return
         }
@@ -23,8 +27,6 @@ class ExpoItemViewController: UIViewController {
         } catch {
             print(error.localizedDescription)
         }
-        
-        self.navigationController?.isNavigationBarHidden = false
     }
 }
 
