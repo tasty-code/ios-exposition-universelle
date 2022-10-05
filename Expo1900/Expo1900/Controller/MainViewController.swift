@@ -14,7 +14,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak private var descriptionLabel: UILabel!
     
     let labelMagicNumber = ": "
-    var expoDescription: ExpoDescription? = nil
+    var expoDescription: ExpoDescription?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,4 +44,3 @@ class MainViewController: UIViewController {
         }
     }
 }
-
