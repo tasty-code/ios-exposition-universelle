@@ -35,7 +35,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UzW-ek-iH0">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="poster" translatesAutoresizingMaskIntoConstraints="NO" id="UzW-ek-iH0">
                                         <rect key="frame" x="74" y="99" width="240" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -110,7 +110,6 @@
                     <connections>
                         <outlet property="descriptionLabel" destination="677-yd-4uz" id="wmS-4r-kNn"/>
                         <outlet property="durationEventLabel" destination="S0a-P8-rpx" id="kE9-Uf-gEh"/>
-                        <outlet property="imageView" destination="UzW-ek-iH0" id="8zp-fw-cFJ"/>
                         <outlet property="titleLabel" destination="VPD-al-eP0" id="K1b-JW-fXz"/>
                         <outlet property="venueCityLabel" destination="Mvd-eX-gTV" id="KM2-e5-IT5"/>
                         <outlet property="visitorCountLabel" destination="UTR-Eq-G8R" id="4am-7X-Rnd"/>
@@ -246,6 +245,7 @@
     </scenes>
     <resources>
         <image name="flag" width="851" height="567"/>
+        <image name="poster" width="144" height="200"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -8,7 +8,6 @@ import UIKit
 
 class MainViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var visitorCountLabel: UILabel!
     @IBOutlet weak var venueCityLabel: UILabel!
     @IBOutlet weak var durationEventLabel: UILabel!
@@ -43,7 +42,6 @@ class MainViewController: UIViewController {
     func updateViewData() {
         if let expoInfo = expoDescription {
             titleLabel.text = expoInfo.title
-            imageView.image = UIImage(named: "poster")
             visitorCountLabel.text = labelMagicNumber + String(expoInfo.visitors)
             venueCityLabel.text = labelMagicNumber + expoInfo.location
             durationEventLabel.text = labelMagicNumber + expoInfo.duration
