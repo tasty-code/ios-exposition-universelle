@@ -14,6 +14,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var durationEventLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    let labelMagicNumber = ": "
     var expoDescription: ExpoDescription? = nil
     
     override func viewDidLoad() {
@@ -43,9 +44,9 @@ class MainViewController: UIViewController {
         if let expoInfo = expoDescription {
             titleLabel.text = expoInfo.title
             imageView.image = UIImage(named: "poster")
-            visitorCountLabel.text = ": " + String(expoInfo.visitors)
-            venueCityLabel.text = ": " + expoInfo.location
-            durationEventLabel.text = ": " + expoInfo.duration
+            visitorCountLabel.text = labelMagicNumber + String(expoInfo.visitors)
+            venueCityLabel.text = labelMagicNumber + expoInfo.location
+            durationEventLabel.text = labelMagicNumber + expoInfo.duration
             descriptionLabel.text = expoInfo.description
         }
     }
