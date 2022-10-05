@@ -8,6 +8,7 @@
 import UIKit
 
 class ExpoItemViewController: UIViewController {
+    let cellIdentifier = "expoDataTableViewCell"
     var items: [ExpositionData] = []
     
     override func viewDidLoad() {
@@ -36,7 +37,7 @@ extension ExpoItemViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell: ExpoDataTableViewCell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as? ExpoDataTableViewCell else {
+        guard let cell: ExpoDataTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ExpoDataTableViewCell else {
             return UITableViewCell()
         }
         
