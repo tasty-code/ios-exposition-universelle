@@ -83,12 +83,12 @@
 		FB1FB61128D97CDB00F6B390 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FBC20A8A28ED1D3F009A91C7 /* Cell */,
 				C79FF4B82589F401005FB0FD /* MainViewController.swift */,
 				C79FF4B42589F401005FB0FD /* AppDelegate.swift */,
 				C79FF4B62589F401005FB0FD /* SceneDelegate.swift */,
 				FB05A36E28E2CFAF00B3F28E /* ExpoItemViewController.swift */,
 				FB2501D628E52CB30070BAD9 /* ExpoItemDetailViewController.swift */,
-				FBC20A8828E6C2D6009A91C7 /* ExpoDataTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -101,6 +101,14 @@
 				C79FF4BF2589F404005FB0FD /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FBC20A8A28ED1D3F009A91C7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FBC20A8828E6C2D6009A91C7 /* ExpoDataTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
