@@ -22,15 +22,15 @@ class ExpoItemDetailViewController: UIViewController {
         }
     }
     
-    func setTitle(in title: String) {
+    private func setTitle(in title: String) {
         self.title = title
     }
     
-    func setDetailImage(in imageName: String) {
+    private func setDetailImage(in imageName: String) {
         detailImage.image = UIImage(named: imageName)
     }
     
-    func setDetailLabel(in text: String) {
+    private func setDetailLabel(in text: String) {
         detailLabel.text = text
     }
 }

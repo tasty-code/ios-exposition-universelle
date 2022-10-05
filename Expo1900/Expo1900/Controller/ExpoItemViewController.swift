@@ -16,7 +16,7 @@ class ExpoItemViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = false
     }
     
-    func initExpoData() {
+    private func initExpoData() {
         guard let expoData: NSDataAsset = NSDataAsset.init(name: "items") else {
             return
         }

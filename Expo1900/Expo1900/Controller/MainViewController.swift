@@ -7,11 +7,11 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var visitorCountLabel: UILabel!
-    @IBOutlet weak var venueCityLabel: UILabel!
-    @IBOutlet weak var durationEventLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak private var titleLabel: UILabel!
+    @IBOutlet weak private var visitorCountLabel: UILabel!
+    @IBOutlet weak private var venueCityLabel: UILabel!
+    @IBOutlet weak private var durationEventLabel: UILabel!
+    @IBOutlet weak private var descriptionLabel: UILabel!
     
     let labelMagicNumber = ": "
     var expoDescription: ExpoDescription? = nil
@@ -26,7 +26,7 @@ class MainViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
     }
     
-    func initExpoInfo() {
+    private func initExpoInfo() {
         guard let expoInfo: NSDataAsset = NSDataAsset.init(name: "exposition_universelle_1900") else {
             return
         }
@@ -39,7 +39,7 @@ class MainViewController: UIViewController {
         }
     }
     
-    func updateViewData() {
+    private func updateViewData() {
         if let expoInfo = expoDescription {
             titleLabel.text = expoInfo.title
             visitorCountLabel.text = labelMagicNumber + String(expoInfo.visitors)
