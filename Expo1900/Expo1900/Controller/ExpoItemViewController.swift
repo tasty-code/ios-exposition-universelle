@@ -8,7 +8,6 @@
 import UIKit
 
 class ExpoItemViewController: UIViewController {
-    let cellIdentifier = "expoDataTableViewCell"
     var items: [ExpositionData] = []
     
     override func viewDidLoad() {
@@ -18,16 +17,11 @@ class ExpoItemViewController: UIViewController {
     }
     
     private func initExpoData() {
-        guard let expoData: NSDataAsset = NSDataAsset.init(name: "items") else {
+        guard let parsed = ParsedExpositionData().expositionData else {
             return
         }
-        let jsonDecoder = JSONDecoder()
-
-        do {
-            self.items = try jsonDecoder.decode([ExpositionData].self, from: expoData.data)
-        } catch {
-            print(error.localizedDescription)
-        }
+        
+        self.items = parsed
     }
 }
 
@@ -37,6 +31,7 @@ extension ExpoItemViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellIdentifier = "expoDataTableViewCell"
         guard let cell: ExpoDataTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ExpoDataTableViewCell else {
             return UITableViewCell()
         }
@@ -45,7 +40,9 @@ extension ExpoItemViewController: UITableViewDataSource {
         
         return cell
     }
-    
+}
+
+extension ExpoItemViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let pushVC: ExpoItemDetailViewController = self.storyboard?.instantiateViewController(identifier: "expoItemDetailPage") else {
             return

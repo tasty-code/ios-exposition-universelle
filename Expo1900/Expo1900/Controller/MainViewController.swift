@@ -27,16 +27,11 @@ class MainViewController: UIViewController {
     }
     
     private func initExpoInfo() {
-        guard let expoInfo: NSDataAsset = NSDataAsset.init(name: "exposition_universelle_1900") else {
+        guard let parsed = ParsedExpoDescription().expoDescription else {
             return
         }
-        let jsonDecoder = JSONDecoder()
-
-        do {
-            self.expoDescription = try jsonDecoder.decode(ExpoDescription.self, from: expoInfo.data)
-        } catch {
-            print(error.localizedDescription)
-        }
+        
+        self.expoDescription = parsed
     }
     
     private func updateViewData() {

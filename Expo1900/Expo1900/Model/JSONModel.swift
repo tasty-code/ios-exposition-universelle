@@ -5,7 +5,7 @@
 //  Created by 천승희 on 2022/09/21.
 //
 
-import Foundation
+import UIKit
 
 struct ExpoDescription: Decodable {
     let title: String
@@ -26,5 +26,25 @@ struct ExpositionData: Decodable {
         case description = "desc"
         case imageName = "image_name"
         case shortDescription = "short_desc"
+    }
+}
+
+struct ParsedExpositionData: JSONDecodable {
+    var expositionData: [ExpositionData]?
+    
+    init() {
+        let fileName = "items"
+        
+        expositionData = try? decodeJSON(of: fileName)
+    }
+}
+
+struct ParsedExpoDescription: JSONDecodable {
+    var expoDescription: ExpoDescription?
+    
+    init() {
+        let fileName = "exposition_universelle_1900"
+        
+        expoDescription = try? decodeJSON(of: fileName)
     }
 }

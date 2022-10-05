@@ -17,6 +17,7 @@
 		FB1FB6A228DA948900F6B390 /* JSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1FB6A128DA948900F6B390 /* JSONModel.swift */; };
 		FB2501D728E52CB30070BAD9 /* ExpoItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2501D628E52CB30070BAD9 /* ExpoItemDetailViewController.swift */; };
 		FBC20A8928E6C2D7009A91C7 /* ExpoDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC20A8828E6C2D6009A91C7 /* ExpoDataTableViewCell.swift */; };
+		FBC20A8D28ED2CA3009A91C7 /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC20A8C28ED2CA3009A91C7 /* JSONDecodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FB1FB6A128DA948900F6B390 /* JSONModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONModel.swift; sourceTree = "<group>"; };
 		FB2501D628E52CB30070BAD9 /* ExpoItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoItemDetailViewController.swift; sourceTree = "<group>"; };
 		FBC20A8828E6C2D6009A91C7 /* ExpoDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoDataTableViewCell.swift; sourceTree = "<group>"; };
+		FBC20A8C28ED2CA3009A91C7 /* JSONDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		C79FF4B32589F401005FB0FD /* Expo1900 */ = {
 			isa = PBXGroup;
 			children = (
+				FBC20A8B28ED2C87009A91C7 /* Protocol */,
 				FB1FB61228D97CE700F6B390 /* View */,
 				FB1FB61128D97CDB00F6B390 /* Controller */,
 				FB1FB61028D97CD400F6B390 /* Model */,
@@ -109,6 +112,14 @@
 				FBC20A8828E6C2D6009A91C7 /* ExpoDataTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		FBC20A8B28ED2C87009A91C7 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				FBC20A8C28ED2CA3009A91C7 /* JSONDecodable.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +195,7 @@
 				FB2501D728E52CB30070BAD9 /* ExpoItemDetailViewController.swift in Sources */,
 				FB1FB6A228DA948900F6B390 /* JSONModel.swift in Sources */,
 				FB05A36F28E2CFAF00B3F28E /* ExpoItemViewController.swift in Sources */,
+				FBC20A8D28ED2CA3009A91C7 /* JSONDecodable.swift in Sources */,
 				C79FF4B92589F401005FB0FD /* MainViewController.swift in Sources */,
 				C79FF4B52589F401005FB0FD /* AppDelegate.swift in Sources */,
 				FBC20A8928E6C2D7009A91C7 /* ExpoDataTableViewCell.swift in Sources */,
