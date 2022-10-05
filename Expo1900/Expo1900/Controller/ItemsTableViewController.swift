@@ -29,6 +29,7 @@ extension ItemsTableViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func setCellData(cell: ItemTableViewCell, data: Item) -> ItemTableViewCell {
+        cell.itemInfo = data
         cell.itemName.text = data.name
         cell.itemImage.image = UIImage(named: data.image)
         cell.shortDescription.text = data.shortDescription
@@ -48,5 +49,11 @@ extension ItemsTableViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as? ItemTableViewCell
+        guard let itemInfoVC = self.storyboard?.instantiateViewController(withIdentifier: "ItemInfoVC") as? ItemInfoViewController else {
+            return
+        }
+        itemInfoVC.itemInfo = cell?.itemInfo
+        navigationController?.pushViewController(itemInfoVC, animated: true)
     }
 }
