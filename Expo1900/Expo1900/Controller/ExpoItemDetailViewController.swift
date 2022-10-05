@@ -14,23 +14,14 @@ class ExpoItemDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.setView()
+    }
+    
+    private func setView() {
         if let itemData = item {
-            setTitle(in: itemData.name)
-            setDetailImage(in: itemData.imageName)
-            setDetailLabel(in: itemData.description)
+            self.title = itemData.name
+            detailImage.image = UIImage(named: itemData.imageName)
+            detailLabel.text = itemData.description
         }
-    }
-    
-    private func setTitle(in title: String) {
-        self.title = title
-    }
-    
-    private func setDetailImage(in imageName: String) {
-        detailImage.image = UIImage(named: imageName)
-    }
-    
-    private func setDetailLabel(in text: String) {
-        detailLabel.text = text
     }
 }
