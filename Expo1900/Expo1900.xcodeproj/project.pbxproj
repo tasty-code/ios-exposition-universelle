@@ -84,9 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				FBC20A8A28ED1D3F009A91C7 /* Cell */,
-				C79FF4B82589F401005FB0FD /* MainViewController.swift */,
 				C79FF4B42589F401005FB0FD /* AppDelegate.swift */,
 				C79FF4B62589F401005FB0FD /* SceneDelegate.swift */,
+				C79FF4B82589F401005FB0FD /* MainViewController.swift */,
 				FB05A36E28E2CFAF00B3F28E /* ExpoItemViewController.swift */,
 				FB2501D628E52CB30070BAD9 /* ExpoItemDetailViewController.swift */,
 			);
