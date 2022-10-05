@@ -20,14 +20,10 @@ final class ExpositionDataParsingTest: XCTestCase {
         expositionData = nil
     }
     
-    func test_데이터_파싱_여부_확인() {
+    func test_박람회_데이터_파싱_여부_확인() {
         var isNotNil: Bool = false
-        guard let expositionDataAsset = NSDataAsset(name: "exposition_universelle_1900.dataset") else {
-            return
-        }
-        let expositionJsonDecoder = JSONDecoder()
+        expositionData = try? JSONParser().getExpositionData()
         
-        expositionData = try? expositionJsonDecoder.decode(Exposition.self, from: expositionDataAsset.data)
         if expositionData != nil {
             isNotNil = true
         }
@@ -35,27 +31,20 @@ final class ExpositionDataParsingTest: XCTestCase {
         XCTAssertTrue(isNotNil)
     }
     
-    func test_데이터_파싱_후_위치변수값_확인() {
-        guard let expositionDataAsset = NSDataAsset(name: "exposition_universelle_1900") else {
-            return
-        }
-        let expositionJsonDecoder = JSONDecoder()
+    func test_박람회_데이터_파싱_후_위치변수값_확인() {
+        let compareString = "프랑스 파리"
         
-        expositionData = try? expositionJsonDecoder.decode(Exposition.self, from: expositionDataAsset.data)
+        expositionData = try? JSONParser().getExpositionData()
         let location = expositionData?.location
         
-        print(location)
+        XCTAssertEqual(location, compareString)
     }
     
-    func test() {
-        guard let relicDataAsset = NSDataAsset(name: "items") else {
-            return
-        }
-        let relicJsonDecoder = JSONDecoder()
+    func test_아이템_데이터_파싱_후_첫번째_아이템_이름변수값_확인() {
+        let compareString = "직지심체요절"
         
-        relicData = try! relicJsonDecoder.decode([Item].self, from: relicDataAsset.data)
+        let itemData = try? JSONParser().getItemsData()
         
-        
-        print(relicData[0].name)
+        XCTAssertEqual(itemData![0].name, compareString)
     }
 }

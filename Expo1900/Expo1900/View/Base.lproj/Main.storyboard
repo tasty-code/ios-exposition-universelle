@@ -98,7 +98,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ZyF-7Z-fSQ"/>
+                    <navigationItem key="navigationItem" id="ZyF-7Z-fSQ">
+                        <barButtonItem key="backBarButtonItem" title="메인" id="Tyo-SK-dlx"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="descriptionLabel" destination="vF3-P7-l3p" id="D3d-O1-BGP"/>
                         <outlet property="durationLabel" destination="xtk-fR-efa" id="s2i-mY-g0A"/>
@@ -155,9 +157,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="itemImage" destination="70j-za-xAe" id="J0B-6J-dxi"/>
-                                            <outlet property="itemName" destination="Vfw-OK-Ko6" id="W2u-xX-Qk6"/>
-                                            <outlet property="shortDescription" destination="F4G-1e-GV9" id="b9D-rd-Ewv"/>
+                                            <outlet property="itemImageView" destination="70j-za-xAe" id="J0B-6J-dxi"/>
+                                            <outlet property="itemNameLabel" destination="Vfw-OK-Ko6" id="W2u-xX-Qk6"/>
+                                            <outlet property="shortDescriptionLabel" destination="F4G-1e-GV9" id="b9D-rd-Ewv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -210,8 +212,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="itemDescription" destination="2MR-ea-YEV" id="3RJ-dS-yWw"/>
-                        <outlet property="itemImage" destination="0uS-rG-wM5" id="69E-TB-BLY"/>
+                        <outlet property="itemDescriptionLabel" destination="2MR-ea-YEV" id="3RJ-dS-yWw"/>
+                        <outlet property="itemImageView" destination="0uS-rG-wM5" id="69E-TB-BLY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FAU-HC-D81" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

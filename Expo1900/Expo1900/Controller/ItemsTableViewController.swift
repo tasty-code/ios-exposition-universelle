@@ -30,9 +30,9 @@ extension ItemsTableViewController: UITableViewDelegate, UITableViewDataSource {
 
     func setCellData(cell: ItemTableViewCell, data: Item) -> ItemTableViewCell {
         cell.itemInfo = data
-        cell.itemName.text = data.name
-        cell.itemImage.image = UIImage(named: data.image)
-        cell.shortDescription.text = data.shortDescription
+        cell.itemNameLabel.text = data.name
+        cell.itemImageView.image = UIImage(named: data.image)
+        cell.shortDescriptionLabel.text = data.shortDescription
         return cell
     }
     

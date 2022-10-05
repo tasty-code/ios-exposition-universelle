@@ -9,8 +9,8 @@ import UIKit
 
 class ItemInfoViewController: UIViewController {
     var itemInfo: Item?
-    @IBOutlet weak var itemImage: UIImageView!
-    @IBOutlet weak var itemDescription: UILabel!
+    @IBOutlet weak var itemImageView: UIImageView!
+    @IBOutlet weak var itemDescriptionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +21,8 @@ class ItemInfoViewController: UIViewController {
         guard let data = itemInfo else {
             return
         }
-        itemImage.image = UIImage(named: data.image)
-        itemDescription.text = data.description
+        itemImageView.image = UIImage(named: data.image)
+        itemDescriptionLabel.text = data.description
     }
     
 }
