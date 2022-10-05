@@ -22,6 +22,10 @@ class MainViewController: UIViewController {
         updateViewData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     func initExpoInfo() {
         guard let expoInfo: NSDataAsset = NSDataAsset.init(name: "exposition_universelle_1900") else {
             return
@@ -44,10 +48,6 @@ class MainViewController: UIViewController {
             durationEventLabel.text = ": " + expoInfo.duration
             descriptionLabel.text = expoInfo.description
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = true
     }
 }
 
