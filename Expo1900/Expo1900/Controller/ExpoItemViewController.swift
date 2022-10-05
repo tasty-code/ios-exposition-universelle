@@ -44,7 +44,8 @@ extension ExpoItemViewController: UITableViewDataSource {
 
 extension ExpoItemViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let pushVC: ExpoItemDetailViewController = self.storyboard?.instantiateViewController(identifier: "expoItemDetailPage") else {
+        let viewControllerIdentifier = "expoItemDetailPage"
+        guard let pushVC: ExpoItemDetailViewController = self.storyboard?.instantiateViewController(identifier: viewControllerIdentifier) else {
             return
         }
         pushVC.item = self.items[indexPath.row]
