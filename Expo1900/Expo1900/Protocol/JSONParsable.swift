@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol JSONParser {
+protocol JSONParsable {
     associatedtype JSONData: Decodable
     var fileName: String { get set }
 }
 
-extension JSONParser {
-    func parsingJSON(fileName: String) throws -> JSONData {
+extension JSONParsable {
+    func decodeJSON(fileName: String) throws -> JSONData {
         guard let assetData: NSDataAsset = NSDataAsset(name: fileName) else {
             throw ExpoError.NilPersingData
         }

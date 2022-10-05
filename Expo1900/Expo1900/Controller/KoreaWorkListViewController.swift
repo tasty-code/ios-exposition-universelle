@@ -47,7 +47,7 @@ extension KoreaWorkListViewController: UITableViewDataSource {
         }
         
         cell.selectionStyle = .none
-        cell.configure(items[indexPath.row])
+        cell.configureCell(items[indexPath.row])
         
         return cell
     }
