@@ -28,17 +28,25 @@ extension ItemsTableViewController: UITableViewDelegate, UITableViewDataSource {
         return itemList.count
     }
 
+    func setCellData(cell: ItemTableViewCell, data: Item) -> ItemTableViewCell {
+        cell.itemName.text = data.name
+        cell.itemImage.image = UIImage(named: data.image)
+        cell.shortDescription.text = data.shortDescription
+        return cell
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ItemTableViewCell else {
+        guard var cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ItemTableViewCell else {
             return UITableViewCell()
         }
-        cell.itemName.text = itemList[indexPath.row].name
-        cell.itemImage.image = UIImage(named: itemList[indexPath.row].image)
-        cell.shortDescription.text = itemList[indexPath.row].shortDescription
+        cell = setCellData(cell: cell, data: itemList[indexPath.row])
         return cell
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
 }

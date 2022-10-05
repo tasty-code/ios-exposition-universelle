@@ -94,7 +94,6 @@
 				C79FF4B62589F401005FB0FD /* SceneDelegate.swift */,
 				C79FF4B42589F401005FB0FD /* AppDelegate.swift */,
 				C79FF4B82589F401005FB0FD /* ExpositionViewController.swift */,
-				AAB2963F28E6ABE10017ABB7 /* ItemTableViewCell.swift */,
 				AAEB519B28EBF06000CED9EF /* ItemsTableViewController.swift */,
 			);
 			path = Controller;
@@ -121,6 +120,7 @@
 		AAB2963E28E6ABAE0017ABB7 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				AAB2963F28E6ABE10017ABB7 /* ItemTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
