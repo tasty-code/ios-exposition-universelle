@@ -289,8 +289,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="nkT-qK-Mj8"/>
                     <connections>
-                        <outlet property="workPieceItemDescriptionLabel" destination="48U-Ce-TYi" id="8YZ-ss-nH5"/>
-                        <outlet property="workPieceItemImageView" destination="E9V-oX-uqV" id="WTq-nM-2LV"/>
+                        <outlet property="descriptionLabel" destination="48U-Ce-TYi" id="ue8-h6-Dbj"/>
+                        <outlet property="imageView" destination="E9V-oX-uqV" id="MMO-7P-Uap"/>
+                        <outlet property="navigationBar" destination="nkT-qK-Mj8" id="emW-vj-7jn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bA-vw-rFJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

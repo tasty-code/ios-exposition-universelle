@@ -9,7 +9,6 @@ import UIKit
 class ViewController: UIViewController {
 
     var exhibitionData: Exhibition?
-    var workPieceInformationData = [WorkPieceInformation]()
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -24,35 +23,27 @@ class ViewController: UIViewController {
         exhibitionData = try? jsonDecoder.decode(Exhibition.self, from: dataAsset.data)
     }
     
-    func workPieceInformationJsonParsingData() {
-        guard let dataAsset = NSDataAsset(name: "items") else { return }
-        let jsonDecoder = JSONDecoder()
-        workPieceInformationData = try! jsonDecoder.decode([WorkPieceInformation].self, from: dataAsset.data)
-    }
-    
     func setLabel() {
         guard let exhibitionData = exhibitionData else {
             return
         }
+        
         titleLabel.text = exhibitionData.title
         visitorLabel.text = "\(exhibitionData.visitors)"
         locationLabel.text = exhibitionData.location
         durationLabel.text = exhibitionData.duration
         descriptionLabel.text = exhibitionData.description
-
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         exhibitionDataJsonParsingData()
-        workPieceInformationJsonParsingData()
         setLabel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
     }
-//    print(workPieceInformationData[0].name)
 
 }
 

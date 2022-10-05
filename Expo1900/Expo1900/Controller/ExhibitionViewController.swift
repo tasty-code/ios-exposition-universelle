@@ -9,10 +9,10 @@ import UIKit
 
 class ExhibitionViewController: UIViewController {
     @IBOutlet weak var workPieceItemTableView: UITableView!
-    
     @IBOutlet weak var navigationBarItem: UINavigationItem!
     
     var workPieceInformationData = [WorkPieceInformation]()
+    
     let cellName = "workPieceItemCell"
     
     override func viewDidLoad() {
@@ -21,9 +21,6 @@ class ExhibitionViewController: UIViewController {
         
         workPieceItemTableView.delegate = self
         workPieceItemTableView.dataSource = self
-        workPieceItemTableView.estimatedRowHeight = 130.0
-        workPieceItemTableView.rowHeight = UITableView.automaticDimension
-        
         // Do any additional setup after loading the view.
     }
     
@@ -38,6 +35,18 @@ class ExhibitionViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationBarItem.title = "한국의 출품작"
         self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "workPieceItemDetail" {
+            if let destination = segue.destination as? WorkPieceItemViewController {
+                if let selectedIndex = self.workPieceItemTableView.indexPathForSelectedRow?.row {
+                    destination.prepareImage = workPieceInformationData[selectedIndex].imageName
+                    destination.prepareDescriptionLabel = workPieceInformationData[selectedIndex].description
+                    destination.prepareTitleName = workPieceInformationData[selectedIndex].name
+                }
+            }
+        }
     }
 }
 
@@ -54,13 +63,6 @@ extension ExhibitionViewController: UITableViewDataSource, UITableViewDelegate {
         workPieceItemCell.workPieceItemDescriptionLabel.text = workPieceInformationData[indexPath.row].shortDescription
         
         return workPieceItemCell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        workPieceItemTableView.deselectRow(at: indexPath, animated: true)
-        
-        let workPieceItemViewController = WorkPieceItemViewController()
-        workPieceItemViewController.receiveItem(workPieceInformationData[indexPath.row])
     }
 }
 

@@ -9,16 +9,27 @@ import UIKit
 
 class WorkPieceItemViewController: UIViewController {
 
-    @IBOutlet weak var workPieceItemImageView: UIImageView!
-    @IBOutlet weak var workPieceItemDescriptionLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var navigationBar: UINavigationItem!
+    
+    var prepareImage: String?
+    var prepareDescriptionLabel: String?
+    var prepareTitleName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setItems()
     }
     
-    func receiveItem(_ item: WorkPieceInformation) {
-        workPieceItemImageView.image = UIImage(named: item.imageName)
+    func setItems() {
+        guard let image = prepareImage,
+              let description = prepareDescriptionLabel,
+              let title = prepareTitleName else { return }
+        
+        imageView.image = UIImage(named: image)
+        descriptionLabel.text = description
+        navigationBar.title = title
     }
+    
 }
