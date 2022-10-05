@@ -46,12 +46,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         exhibitionDataJsonParsingData()
         workPieceInformationJsonParsingData()
-        navigationController?.navigationBar.topItem?.backButtonTitle = "메인"
         setLabel()
-        
-        
-        
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
     }
 //    print(workPieceInformationData[0].name)
 
