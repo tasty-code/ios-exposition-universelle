@@ -54,5 +54,3 @@ extension ExpoItemViewController: UITableViewDataSource {
         self.navigationController?.pushViewController(pushVC, animated: true)
     }
 }
-
-extension ExpoItemViewController: UITableViewDelegate {}
