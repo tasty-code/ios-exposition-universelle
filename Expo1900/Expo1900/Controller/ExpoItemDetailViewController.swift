@@ -10,7 +10,7 @@ import UIKit
 class ExpoItemDetailViewController: UIViewController {
     @IBOutlet weak private var detailImage: UIImageView!
     @IBOutlet weak private var detailLabel: UILabel!
-    var item: ExpositionData? = nil
+    var item: ExpositionData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
