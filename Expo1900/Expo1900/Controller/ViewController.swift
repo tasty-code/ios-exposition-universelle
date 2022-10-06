@@ -28,11 +28,18 @@ class ViewController: UIViewController {
             return
         }
         
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        guard let result = numberFormatter.string(from: NSNumber(value: exhibitionData.visitors)) else {return}
+        
         titleLabel.text = "\(exhibitionData.title)"
-        visitorLabel.text = "방문객  : \(exhibitionData.visitors)명"
+        visitorLabel.text = "방문객  : \(result)명"
         locationLabel.text = "개최지  : \(exhibitionData.location)"
         durationLabel.text = "개최기간  : \(exhibitionData.duration)"
         descriptionLabel.text = "\(exhibitionData.description)"
+        
+        
+        
     }
     
     override func viewDidLoad() {
