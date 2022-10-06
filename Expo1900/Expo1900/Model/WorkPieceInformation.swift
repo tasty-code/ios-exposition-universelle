@@ -1,19 +1,11 @@
 //
-//  EntryResponse.swift
+//  WorkPieceInformation.swift
 //  Expo1900
 //
-//  Created by 세윤 on 2022/09/21.
+//  Created by 세윤 on 2022/09/22.
 //
 
 import Foundation
-
-struct Exhibition: Decodable {
-    let title: String
-    let visitors: Int
-    let location: String
-    let duration: String
-    let description: String
-}
 
 struct WorkPieceInformation: Decodable {
     let name: String
@@ -23,9 +15,8 @@ struct WorkPieceInformation: Decodable {
     
     enum CodingKeys: String, CodingKey {
         case name
+        case description = "desc"
         case imageName = "image_name"
         case shortDescription = "short_desc"
-        case description
     }
 }
- 
