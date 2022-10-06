@@ -28,11 +28,11 @@ class ViewController: UIViewController {
             return
         }
         
-        titleLabel.text = exhibitionData.title
-        visitorLabel.text = "\(exhibitionData.visitors)"
-        locationLabel.text = exhibitionData.location
-        durationLabel.text = exhibitionData.duration
-        descriptionLabel.text = exhibitionData.description
+        titleLabel.text = "\(exhibitionData.title)"
+        visitorLabel.text = "방문객  : \(exhibitionData.visitors)명"
+        locationLabel.text = "개최지  : \(exhibitionData.location)"
+        durationLabel.text = "개최기간  : \(exhibitionData.duration)"
+        descriptionLabel.text = "\(exhibitionData.description)"
     }
     
     override func viewDidLoad() {
@@ -44,6 +44,5 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
     }
-
 }
 

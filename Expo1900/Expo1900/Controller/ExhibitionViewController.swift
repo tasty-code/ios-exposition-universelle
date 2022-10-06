@@ -18,17 +18,15 @@ class ExhibitionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         workPieceInformationJsonParsingData()
-        
         workPieceItemTableView.delegate = self
         workPieceItemTableView.dataSource = self
-        // Do any additional setup after loading the view.
     }
     
     func workPieceInformationJsonParsingData() {
         let jsonDecoder = JSONDecoder()
         guard let dataAsset = NSDataAsset(name: "items"),
               let data = try? jsonDecoder.decode([WorkPieceInformation].self, from: dataAsset.data) else { return }
-        
+
         workPieceInformationData = data
     }
     
@@ -65,4 +63,6 @@ extension ExhibitionViewController: UITableViewDataSource, UITableViewDelegate {
         return workPieceItemCell
     }
 }
+
+// prepare 메서드와 tableview didselectrowat 메서드 둘중 어떤것을 이용하는것이 segue되어있는 뷰에 데이터를 전달하는 방법으로 적절한지.
 
