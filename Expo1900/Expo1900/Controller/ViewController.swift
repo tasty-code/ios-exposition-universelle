@@ -37,9 +37,6 @@ class ViewController: UIViewController {
         locationLabel.text = "개최지  : \(exhibitionData.location)"
         durationLabel.text = "개최기간  : \(exhibitionData.duration)"
         descriptionLabel.text = "\(exhibitionData.description)"
-        
-        
-        
     }
     
     override func viewDidLoad() {
