@@ -8,13 +8,12 @@
 import UIKit
 
 class WorkListTableViewCell: UITableViewCell {
-
     @IBOutlet weak private var workImageView: UIImageView!
     @IBOutlet weak private var workNameLabel: UILabel!
     @IBOutlet weak private var workShortDescription: UILabel!
     
     
-    func configure(_ item: Item) {
+    func configureCell(_ item: Item) {
         workImageView.image = UIImage(named: item.imageName)
         workNameLabel.text = item.name
         workShortDescription.text = item.shortDescription
@@ -26,6 +25,5 @@ class WorkListTableViewCell: UITableViewCell {
         workImageView.image = nil
         workNameLabel.text = .empty
         workShortDescription.text = .empty
-        
     }
 }

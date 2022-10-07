@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct ParsedItem: JSONParser {
+struct ParsedItem: JSONParsable {
     typealias JSONData = [Item]
     var fileName: String = "items"
     var items: [Item]?
     
     init() {
-        items = try? parsingJSON(fileName: fileName)
+        items = try? decodeJSON(fileName: fileName)
     }
     
 }

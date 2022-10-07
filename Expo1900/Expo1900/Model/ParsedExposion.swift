@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ParsedExposion: JSONParser {
+struct ParsedExposion: JSONParsable {
     typealias JSONData = Exposition
     var fileName: String = "exposition"
     
@@ -18,7 +18,7 @@ struct ParsedExposion: JSONParser {
     private(set) var description: String?
     
     init() {
-        if let exposition = try? parsingJSON(fileName: fileName) {
+        if let exposition = try? decodeJSON(fileName: fileName) {
             self.title = exposition.title
             self.visitors =  formatVisitor(visitor: exposition.visitors)
             self.location = formatLocation(location: exposition.location)
