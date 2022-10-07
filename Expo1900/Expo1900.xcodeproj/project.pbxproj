@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		265AFE7028E2B5B700D456C5 /* ParsingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AFE6F28E2B5B700D456C5 /* ParsingError.swift */; };
+		265AFE7028E2B5B700D456C5 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265AFE6F28E2B5B700D456C5 /* Error.swift */; };
 		26762AA028DAA70300D43477 /* Exposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26762A9F28DAA70300D43477 /* Exposition.swift */; };
 		268C187C28D98A6900981105 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C187B28D98A6900981105 /* Item.swift */; };
 		26D4399A28DC28B300722F7B /* ExpositionDataParsingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D4399928DC28B300722F7B /* ExpositionDataParsingTest.swift */; };
@@ -34,7 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		265AFE6F28E2B5B700D456C5 /* ParsingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingError.swift; sourceTree = "<group>"; };
+		265AFE6F28E2B5B700D456C5 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		26762A9F28DAA70300D43477 /* Exposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exposition.swift; sourceTree = "<group>"; };
 		268C187B28D98A6900981105 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		26D4399728DC28B300722F7B /* ExpositionDataParsingTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpositionDataParsingTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,7 +74,7 @@
 		265AFE6E28E2B56F00D456C5 /* Error */ = {
 			isa = PBXGroup;
 			children = (
-				265AFE6F28E2B5B700D456C5 /* ParsingError.swift */,
+				265AFE6F28E2B5B700D456C5 /* Error.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -273,7 +273,7 @@
 				268C187C28D98A6900981105 /* Item.swift in Sources */,
 				C79FF4B52589F401005FB0FD /* AppDelegate.swift in Sources */,
 				AAEB51A228EBF83B00CED9EF /* JSONParser.swift in Sources */,
-				265AFE7028E2B5B700D456C5 /* ParsingError.swift in Sources */,
+				265AFE7028E2B5B700D456C5 /* Error.swift in Sources */,
 				AAB2964028E6ABE10017ABB7 /* ItemTableViewCell.swift in Sources */,
 				C79FF4B72589F401005FB0FD /* SceneDelegate.swift in Sources */,
 			);

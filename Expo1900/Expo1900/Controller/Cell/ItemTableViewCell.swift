@@ -14,12 +14,13 @@ class ItemTableViewCell: UITableViewCell {
     @IBOutlet weak var shortDescriptionLabel: UILabel!
     var itemInfo: Item?
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    func setCellData(itemInfo: Item) {
+        self.itemInfo = itemInfo
+        if let item = self.itemInfo {
+            self.itemNameLabel.text = item.name
+            self.itemImageView.image = UIImage(named: item.image)
+            self.shortDescriptionLabel.text = item.shortDescription
+        }
     }
 }
  
