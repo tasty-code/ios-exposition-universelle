@@ -8,9 +8,9 @@
 import UIKit
 
 class ItemInfoViewController: UIViewController {
+    @IBOutlet private weak var itemImageView: UIImageView!
+    @IBOutlet private weak var itemDescriptionLabel: UILabel!
     var itemInfo: Item?
-    @IBOutlet weak var itemImageView: UIImageView!
-    @IBOutlet weak var itemDescriptionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

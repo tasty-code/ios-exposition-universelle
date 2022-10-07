@@ -7,38 +7,49 @@
 import UIKit
 
 class ExpositionViewController: UIViewController {
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var visitorsLabel: UILabel!
-    @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var durationLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var visitorsLabel: UILabel!
+    @IBOutlet private weak var locationLabel: UILabel!
+    @IBOutlet private weak var durationLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        try? setView(from: getExpositionData())
+    }
+    
+    private func getExpositionData() throws -> Exposition {
         guard let expositionData = try? JSONParser().getExpositionData() else {
-            return
+            throw MyError.expositionParsingError
         }
         
-        setUiData(from: expositionData)
+        return expositionData
     }
     
-    func setUiData(from data: Exposition) {
-        titleLabel.text = data.title
-        visitorsLabel.text = "방문객 : \(numberFormatToDecimal(of: data.visitors)) 명"
-        locationLabel.text = "개최지 : \(data.location)"
-        durationLabel.text = "개최 기간 : \(data.duration)"
-        descriptionLabel.text = data.description
+    private func setView(from data: Exposition) {
+        let title = data.title
+        let visitors: String = "방문객 : "
+        let location: String = "개최지 : "
+        let duration: String = "개최 기간 : "
+        let description = data.description
+        
+        titleLabel.text = title
+        visitorsLabel.text = try? visitors + numberFormatToDecimal(of: data.visitors)
+        locationLabel.text = location + data.location
+        durationLabel.text = duration + data.duration
+        descriptionLabel.text = description
     }
     
-    func numberFormatToDecimal(of number: Int?) -> String {
+    private func numberFormatToDecimal(of number: Int?) throws -> String {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
         
         guard let newNumber = number, let result = numberFormatter.string(from: NSNumber(value: newNumber)) else {
-            return "NaN"
+            throw MyError.decimalConversionError
         }
         
-        return result
+        return result + "명"
     }
 }
